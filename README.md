@@ -21,6 +21,4 @@
 **Uriel Martínez Sánchez**
 - [Github profile ](https://github.com/urielmtzsa "Uriel Martínez Sánchez")
 
-
-
-
+We are the best team because we strongly believe that API stands for Amazing People Integrated... and we think that's beautiful. 
