@@ -8,10 +8,10 @@
 | **Name** |**email**|**clave única**|**Github handler**| 
 |:---:|:---:|:---:|:---:|
 
-|Carlos Eduardo López de la Cerda Bazaldua|carlos.lopezdelacerda@itam.mx|158122|@kennyldc| 
-|Miguel Ángel Reyes Retana|mreyesre@itam.mx|045799|@rrmiguel-2401| 
-|Uriel Martínez Sánchez|umartin5@itam.mx|000202942 |@urielmtzsa|  
-|Luis Fernando Peña Flores| luis.pena@itam.mx| | |  
+| Carlos Eduardo López de la Cerda Bazaldua | carlos.lopezdelacerda@itam.mx | 158122 | @kennyldc | 
+| Miguel Ángel Reyes Retana | mreyesre@itam.mx | 045799 | @rrmiguel-2401 |
+| Uriel Martínez Sánchez | umartin5@itam.mx | 000202942 | @urielmtzsa| 
+| Luis Fernando Peña Flores | luis.pena@itam.mx | | | 
 
 **Miguel Reyes Retana**
 - [Github profile ](https://github.com/rrmiguel-2401 "Miguel Reyes Retana")
