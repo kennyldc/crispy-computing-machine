@@ -10,7 +10,7 @@
 | Carlos Eduardo López de la Cerda Bazaldua | carlos.lopezdelacerda@itam.mx | 158122 | @kennyldc | 
 | Miguel Ángel Reyes Retana | mreyesre@itam.mx | 045799 | @rrmiguel-2401 |
 | Uriel Martínez Sánchez | umartin5@itam.mx | 000202942 | @urielmtzsa| 
-| Luis Fernando Peña Flores | luis.pena@itam.mx | | | 
+| Peña Flores, Luis Fernando | luis.pena@itam.mx | 158488 | @TheKishimoto | 
 
 **Miguel Reyes Retana**
 - [Github profile ](https://github.com/rrmiguel-2401 "Miguel Reyes Retana")
@@ -20,5 +20,8 @@
 
 **Uriel Martínez Sánchez**
 - [Github profile ](https://github.com/urielmtzsa "Uriel Martínez Sánchez")
+
+**Peña Flores, Luis Fernando**
+- [Github profile ](https://github.com/TheKishimoto "Peña Flores, Luis Fernando")
 
 We are the best team because we strongly believe that API stands for Amazing People Integrated... and we think that's beautiful. 
