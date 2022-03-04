@@ -22,7 +22,7 @@ The ML objective is to make accurate predictions about the cryptocurrency prices
 
 Current and potential investors. In short, people who are interested in make money :moneybag:
 
--How are users going to interact with your application?
+- How are users going to interact with your application?
 
 Earlier iterations of our product will show predictions based on historical data, mainly doing assisted queries without any sophisticated UI. Advanced versions using our data product as inspiration could be deployed to users in dashboards using software such as Looker, Apache Superset or Mode.
 
