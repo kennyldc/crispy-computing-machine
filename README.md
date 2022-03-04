@@ -22,6 +22,8 @@ People who are interested in making money
 
 ## 3. Data Product Architecture Diagram 
 
+![proposal-dag](https://user-images.githubusercontent.com/69408484/156854626-b6abf8f5-2f59-4048-bd80-c9a07b3bd47c.png)
+
 ## 4.Data
 
 We will gather Data from two API´s:
