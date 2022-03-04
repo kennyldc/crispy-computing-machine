@@ -3,6 +3,34 @@
 
 <h2 align="left">crispy-computing-machine</h2>
 
+# Project Proposal
+
+
+## Objectives
+
+
+We want to build a prediction model about cryptocurrency which can measure and predict market movements based on sentimental analysis extracted from journals and news.
+
+
+## Users
+
+## Data Product Architecture Diagram
+
+## Data
+
+## Modeling
+
+## Evaluation
+
+## Inference
+
+## Compute
+
+## MVP
+
+## Pre-mortems
+
+
 
 
 | **Name** |**email**|**clave única**|**Github handler**| 
