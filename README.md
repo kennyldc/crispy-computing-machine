@@ -24,7 +24,14 @@ People who are interested in making money
 
 ## 4.Data
 
-We will gather Data from two API´s (insert links) and we will be able to use the prices from the stock prices and the webpage´s news. Both API´s that will be used are free 
+We will gather Data from two API´s:
+
+ - [title](https://www.example.com)
+
+ -  [title](https://www.example.com)
+
+
+We will be able to use the prices from the stock prices and the webpage´s news. Both API´s that will be used are free 
 
 
 ## 5. Modeling
