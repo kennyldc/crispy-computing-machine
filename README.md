@@ -26,9 +26,9 @@ People who are interested in making money
 
 We will gather Data from two API´s:
 
- - [title](https://www.example.com)
+ - [Coingecko](https://www.coingecko.com/)
 
- -  [title](https://www.example.com)
+ -  [NewsAPI](https://newsapi.org/)
 
 
 We will be able to use the prices from the stock prices and the webpage´s news. Both API´s that will be used are free 
