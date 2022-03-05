@@ -43,7 +43,9 @@ We will be able to use the prices from the stock prices and the webpage´s news.
 
 ## 5. Modeling
 
-The problem that our Data Product solves could be modeled as one of supervised learning   where the main output is the market price. However, this response variable could be modified to measure a change in the numeric value of a certain index or discretize it to only quantify changes in a certain range. An alternative could be to estimate whether it varies or not. In that case, the simplest model to estimate is a logistic regression and could also be implemented alternatively with a Random Forest classification model.
+The problem that our Data Product solves could be modeled as one of supervised learning where the main output is the market price and one of the inputs consist of some sort of metric about the sentiment in news media. However, this response variable could be modified to measure a change in the numeric value of a certain index or discretize it to only quantify changes in a certain range. An alternative could be to estimate whether it varies or not. In that case, the simplest model to estimate is a logistic regression and could also be implemented alternatively with a Random Forest classification model.
+
+One of the main features of our project is that our main input, the sentiment analysis in news, requires at the same time some kind of modeling effort where the titles and the corpus of the articles are processed to indicate whether it has positive or negative characteristics about the cryptocurrency in the data. In this case, natural language processing models come in handy.
 
 In any case, we would use pretrained models with implementations either in Python or R.
 
