@@ -77,6 +77,16 @@ For the most part of our MVP, devices with only CPU are enough. More sophisticat
 
 ## 9. MVP
 
+- What would the MVP be?
+
+A simple MVP would be capable of presenting a summary of the number of news related to our crypto in a certain period of time, indicate whether they were positive or negative and show how this could affect the price. The user will have the ability of changing certain parameters such as the historical period for news to get analyzed and characteristics of the media source.
+
+Additional layers of complexity could be added tuning the NLP algorithms, the prediction ML models and the user interface.
+
+- How difficult is it to get there?
+
+We need to gather data from two different sources and understand two different API documentations. It is also difficult to find the best models for sentiment analysis and the ML tools to get a reasonable prediction. A decent output interface could also be problematic taking into consideration the different profile of users.
+
 ## 10. Pre-mortems
 
 The availability of Data could be considered as the main problem 
