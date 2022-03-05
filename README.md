@@ -63,7 +63,9 @@ For our first iterations evaluations will consist mostly on performance inside t
 
 - Will you be doing online prediction or batch prediction or a combination of both?
 
-Our product consists in doing online prediction due to the necessity of timely actualizations everytime an article is published. It also has advantages such as low cost inside the GCP. See also https://cloud.google.com/ai-platform/prediction/docs/online-vs-batch-prediction 
+Our product consists in doing online prediction due to the necessity of timely actualizations everytime an article is published. It also has advantages such as low cost inside the GCP. See also  -  [Online vs Batch prediction](https://cloud.google.com/ai-platform/prediction/docs/online-vs-batch-prediction)
+
+  
 
 - Will the inference run on-device or through a server?
 
