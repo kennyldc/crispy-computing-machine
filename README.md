@@ -10,21 +10,21 @@
 
 - What is the problem that your Data Product will solve?
 
-We want to build a prediction model about cryptocurrency which can measure and predict market movements based on sentimental analysis extracted from journals and news.
+We want to build a prediction model about cryptocurrency which can measure and predict market movements based on sentiment analysis extracted from journals and news.
 
 - If a company was to use this application, what would be their ML objectives and business objectives?
 
-The ML objective is to make accurate predictions about the cryptocurrency prices taking into main consideration the mechanisms of how news affects the market. The main business objective is to shed light to current and potential investors on how they could earn more money taking advantage of the insights in historic data.
+The ML objective is to make accurate predictions about the cryptocurrency prices taking into consideration the mechanisms of how news affects the market. The main business objective is to shed light to current and potential investors on how they could earn more money taking advantage of the insights in historic data.
 
 ## 2. Users
 
 - Who will be the users of your application?
 
-Current and potential investors. In short, people who are interested in make money :moneybag:
+Current and potential investors. In short, people who are interested in making money :moneybag:
 
 - How are users going to interact with your application?
 
-Earlier iterations of our product will show predictions based on historical data, mainly doing assisted queries without any sophisticated UI. Advanced versions using our data product as inspiration could be deployed to users in dashboards using software such as Looker, Apache Superset or Mode.
+Earlier iterations of our product will show predictions based on historical data, mainly doing assisted queries without any sophisticated UI. Advanced versions using our data product as inspiration could be deployed to users in dashboards using software such as Looker or Mode.
 
 ## 3. Data Product Architecture Diagram 
 
@@ -85,7 +85,7 @@ Additional layers of complexity could be added tuning the NLP algorithms, the pr
 
 - How difficult is it to get there?
 
-We need to gather data from two different sources and understand two different API documentations. It is also difficult to find the best models for sentiment analysis and the ML tools to get a reasonable prediction. A decent output interface could also be problematic taking into consideration the different profile of users.
+We need to gather data from two different sources and understand two different API documentations. It is also difficult to find the best models for sentiment analysis and the ML tools to get a reasonable prediction. A decent output interface could also be problematic taking into consideration the different profiles of users.
 
 ## 10. Pre-mortems
 
