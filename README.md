@@ -89,8 +89,22 @@ We need to gather data from two different sources and understand two different A
 
 ## 10. Pre-mortems
 
-The availability of Data could be considered as the main problem 
+- What are the risky aspects of the project? 
 
+There is a possibility of a mismatch between the news articles and the currencies we want to include in our product. For example, many articles related to Bitcoin but almost zero for Ethereum. It is also possible that even though we are still in ways to explore certain connections between the two sources of information, it turns out that they are completely unrelated.
+Less dramatic failures could be in terms of poor performance models.
+
+- If your team fails to build the application you want, what do you think might have caused the failure?
+
+It could be the mismatch and no correlation of the two sources or a problem in the data we are including. For example, low coverage of media from all parts of the world.
+
+- What are the limitations of your application?
+
+This is a niche data product. Many common people could be completely unaffected by the crypto market and have none interest in it. 
+
+- What are the potential biases of your application?
+
+We could be manipulating the relation between news and the crypto market and falling into the trap of establishing causality in a correlation scenario.
 
 # Members 
 
