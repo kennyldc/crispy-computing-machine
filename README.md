@@ -43,8 +43,9 @@ We will be able to use the prices from the stock prices and the webpage´s news.
 
 ## 5. Modeling
 
-We want to start up with a classification model. The simplest one is the logistic regression working alternatively with a Random Forest classification model.
+The problem that our Data Product solves could be modeled as one of supervised learning   where the main output is the market price. However, this response variable could be modified to measure a change in the numeric value of a certain index or discretize it to only quantify changes in a certain range. An alternative could be to estimate whether it varies or not. In that case, the simplest model to estimate is a logistic regression and could also be implemented alternatively with a Random Forest classification model.
 
+In any case, we would use pretrained models with implementations either in Python or R.
 
 ## 6. Evaluation
 
