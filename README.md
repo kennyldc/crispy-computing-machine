@@ -51,7 +51,27 @@ In any case, we would use pretrained models with implementations either in Pytho
 
 ## 6. Evaluation
 
+- How would you evaluate your model performance, both during training and inference?
+
+To evaluate model performance we will rely on generic performance metrics such as accuracy.
+
+- How would you evaluate whether your application satisfies its objectives?
+
+For our first iterations evaluations will consist mostly on performance inside the model. In a real case scenario, success in our product could be measured by the monetary gains of our clients after a determined time. 
+
 ## 7. Inference
+
+- Will you be doing online prediction or batch prediction or a combination of both?
+
+Our product consists in doing online prediction due to the necessity of timely actualizations everytime an article is published. It also has advantages such as low cost inside the GCP. See also https://cloud.google.com/ai-platform/prediction/docs/online-vs-batch-prediction 
+
+- Will the inference run on-device or through a server?
+
+¿?
+
+- Can you run inference on CPUs or an edge device or do you need GPUs?
+
+For the most part of our MVP, devices with only CPU are enough. More sophisticated iterations and models, particularly in the natural language processing side, could use devices with GPU.
 
 ## 8. Compute
 
