@@ -1,0 +1,15 @@
+bucket: itam-2022-bucket
+cryptos: 
+ - btc
+ - eth
+ - bnb
+ - xrp
+ - luna
+ - sol
+ - ada
+ - avax
+ - dot
+ - doge
+period:
+ - 01-01-2021
+ - 31-01-2021
