@@ -65,12 +65,6 @@ For our first iterations evaluations will consist mostly on performance inside t
 
 Our product consists in doing online prediction due to the necessity of timely actualizations everytime an article is published. It also has advantages such as low cost inside the GCP. See also  -  [Online vs Batch prediction](https://cloud.google.com/ai-platform/prediction/docs/online-vs-batch-prediction)
 
-  
-
-- Will the inference run on-device or through a server?
-
-¿?
-
 - Can you run inference on CPUs or an edge device or do you need GPUs?
 
 For the most part of our MVP, devices with only CPU are enough. More sophisticated iterations and models, particularly in the natural language processing side, could use devices with GPU.
