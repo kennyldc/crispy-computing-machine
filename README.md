@@ -39,7 +39,7 @@ We will gather Data from two API´s:
  -  [NewsAPI](https://newsapi.org/)
 
 
-We will be able to use the prices from the stock prices and the webpage´s news. Both API´s that will be used are free 
+We will be able to use the prices from the currencies and the webpage´s news. Both API´s that will be used are free.
 
 ## 5. Modeling
 
@@ -70,6 +70,8 @@ Our product consists in doing online prediction due to the necessity of timely a
 For the most part of our MVP, devices with only CPU are enough. More sophisticated iterations and models, particularly in the natural language processing side, could use devices with GPU.
 
 ## 8. Compute
+
+Same as with inference, for the most part of our MVP devices with only CPU are enough. More sophisticated iterations and models, particularly in the natural language processing side, could use devices with GPU.
 
 ## 9. MVP
 
