@@ -1,0 +1,8 @@
+bucket: crispy-bucket-2022
+api_key: API_KEY
+language: en
+topics: 
+ - cryptocurrencies
+period:
+ - 05-03-2022
+ - 10-03-2022
