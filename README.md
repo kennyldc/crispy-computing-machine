@@ -30,16 +30,20 @@ Our data product will be displayed in a website. The user will be capable to sel
 
 ![proposal-dag](https://user-images.githubusercontent.com/69408484/156854810-93d243af-cb5f-43cd-a804-1022436c2cbc.png)
 
-## 4.Data
+## 4.Data :chart_with_upwards_trend:
 
-We will gather Data from two API´s:
+[Coingecko](https://www.coingecko.com/) is a crypto API with data such as live prices, trading volume, exchange volumes, trading pairs, historical data, contract address data, crypto categories, crypto derivatives, images and more.
 
- - [Coingecko](https://www.coingecko.com/)
+From API's documentation we obtained examples for our API Request Payloads. Even though the API does not require a key, it has a rate limit of 50 calls/minute, however, in practice we made a rate limit of 35 calls/minute so the API didn't block us.
 
- -  [NewsAPI](https://newsapi.org/)
+In this first API Request Payload we get the top 6 market cap criptocurrencies from 01-01-2017 to 28-02-2022:
 
-
-We will be able to use the prices from the currencies and the webpage´s news. Both API´s that will be used are free.
+- btc
+- eth
+- bnb
+- xrp
+- luna
+- sol
 
 ## 5. Modeling
 
