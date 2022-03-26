@@ -108,4 +108,6 @@ While the MVP requires only information from the cryptocurrencies to make the pr
 **Peña Flores, Luis Fernando**
 - [Github profile ](https://github.com/TheKishimoto "Peña Flores, Luis Fernando")
 
+# Why we are the best team? :busts_in_silhouette:
+
 We are the best team because we strongly believe that API stands for Amazing People Integrated... and we think that's beautiful. 
