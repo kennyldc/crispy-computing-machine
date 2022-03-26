@@ -83,7 +83,7 @@ Failures in the application comes more from the usability side of the users in t
 
 Another limitation is that this is a niche data product. Many common people could be completely unaffected by the crypto market and have no interest in it.
 
-11. Next steps :feet:
+## 11. Next steps :feet:
 
 While the MVP requires only information from the cryptocurrencies to make the prediction, other phenomena suchs a news and media impact could also be related to the price movements.In more advanced iterations we could explore these trends with new data sources. 
 
