@@ -18,11 +18,7 @@ We will build a prediction model with the current top six cryptocurrencies to me
 
 ## 2. Users :couple:
 
-- Who will be the users of your application?
-
-Current and potential investors. In short, people who are interested in making money :moneybag:
-
-- How are users going to interact with your application?
+Users of our product are current and potential investors. In short, people who are interested in making money :moneybag:
 
 Our data product will be displayed in a website. The user will be capable to select the currency of his/her interest and the number of days to make the prediction.
 
