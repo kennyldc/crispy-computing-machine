@@ -55,15 +55,11 @@ In any case, the simplest model to estimate is a logistic regression and could a
 
 We would use pretrained models with implementations in Python and BigQuery ML. 
 
-## 6. Evaluation
+## 6. Evaluation :white_check_mark:
 
-- How would you evaluate your model performance, both during training and inference?
+To evaluate model performance we will rely on generic performance metrics such as accuracy, because we'll work on a classification ML problem (if the currency price goes up or goes down).
 
-To evaluate model performance we will rely on generic performance metrics such as accuracy.
-
-- How would you evaluate whether your application satisfies its objectives?
-
-For our first iterations evaluations will consist mostly on performance inside the model. In a real case scenario, success in our product could be measured by the monetary gains of our clients after a determined time. 
+Success in our product could be measured by the monetary gains of our clients after a determined time. 
 
 ## 7. Inference
 
