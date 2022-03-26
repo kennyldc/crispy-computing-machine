@@ -24,7 +24,7 @@ Our data product will be displayed in a website. The user will be capable to sel
 
 ## 3. Data Product Architecture Diagram 
 
-![proposal-dag](https://user-images.githubusercontent.com/69408484/156854810-93d243af-cb5f-43cd-a804-1022436c2cbc.png)
+![diagram](https://user-images.githubusercontent.com/69408484/160226312-59a323a3-87e7-41a7-a803-0cf29ac04830.png)
 
 ## 4.Data :chart_with_upwards_trend:
 
