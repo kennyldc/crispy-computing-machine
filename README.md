@@ -75,24 +75,13 @@ For our MVP we want to complete a minimal useful workflow: extract historical da
 
 Tools from the GCP we’ll make our journey much easier! 
 
-## 10. Pre-mortems
+## 10. Pre-mortems :skull:
 
-- What are the risky aspects of the project? 
+The number of currencies in our product multiplies the number of models and the potential pitfalls in our predictions.
 
-There is a possibility of a mismatch between the news articles and the currencies we want to include in our product. For example, many articles related to Bitcoin but almost zero for Ethereum. It is also possible that even though we are still in ways to explore certain connections between the two sources of information, it turns out that they are completely unrelated.
-Less dramatic failures could be in terms of poor performance models.
+Failures in the application comes more from the usability side of the users in the sense that we could provide inaccurate predictions. In terms of the engineering process, the complexity in the number of variables could interfere in the workflow. 
 
-- If your team fails to build the application you want, what do you think might have caused the failure?
-
-It could be the mismatch and no correlation of the two sources or a problem in the data we are including. For example, low coverage of media from all parts of the world.
-
-- What are the limitations of your application?
-
-This is a niche data product. Many common people could be completely unaffected by the crypto market and have none interest in it. 
-
-- What are the potential biases of your application?
-
-We could be manipulating the relation between news and the crypto market and falling into the trap of establishing causality in a correlation scenario.
+Another limitation is that this is a niche data product. Many common people could be completely unaffected by the crypto market and have no interest in it.
 
 # Members 
 
