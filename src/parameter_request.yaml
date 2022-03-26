@@ -1,4 +1,4 @@
-bucket: crispy-bucket-2022
+bucket: 'bucket-name'
 cryptos: 
  - btc
  - eth
