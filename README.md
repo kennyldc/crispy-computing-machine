@@ -61,19 +61,15 @@ To evaluate model performance we will rely on generic performance metrics such a
 
 Success in our product could be measured by the monetary gains of our clients after a determined time. 
 
-## 7. Inference
+## 7. Inference :arrows_counterclockwise:
 
-- Will you be doing online prediction or batch prediction or a combination of both?
-
-Our product consists in doing online prediction due to the necessity of timely actualizations everytime an article is published. It also has advantages such as low cost inside the GCP. See also  -  [Online vs Batch prediction](https://cloud.google.com/ai-platform/prediction/docs/online-vs-batch-prediction)
-
-- Can you run inference on CPUs or an edge device or do you need GPUs?
-
-For the most part of our MVP, devices with only CPU are enough. More sophisticated iterations and models, particularly in the natural language processing side, could use devices with GPU.
+Our product consists in doing online prediction taking advantage of the low cost inside the GCP. For the most part of our MVP, devices with only CPU are enough while more sophisticated neural networks could use GPUs.
 
 ## 8. Compute
 
 Same as with inference, for the most part of our MVP devices with only CPU are enough. More sophisticated iterations and models, particularly in the natural language processing side, could use devices with GPU.
+
+We wil only do inference when the user make the request for a specific currency in a specific period of time.
 
 ## 9. MVP
 
