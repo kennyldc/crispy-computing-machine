@@ -73,17 +73,11 @@ For the most part of our data product, devices with only CPU are enough while mo
 
 Only one device is enough and we are currently working in a VM with 2 vCPUs, 7.5 GB RAM, and TensorFlow 2.8 as the environment. We do not foresee having issues with billing. 
 
-## 9. MVP
+## 9. MVP :trophy:
 
-- What would the MVP be?
+For our MVP we want to complete a minimal useful workflow: extract historical data from the API and storage it in a Bucket, perform a basic EDA to visualize trends, execute queries inside BigQuery to get a glimpse of the data, make a basic feature engineering of the variables, test candidate ML models to make the prediction with logistic regressions inside BigQuery ML and neural networks inside Vertex AI if the price goes up or goes down, tune the hyperparameters and deploy the model to construct a web interface where our user could select a currency and a time window to see our prediction.
 
-A simple MVP would be capable of presenting a summary of the number of news related to our crypto in a certain period of time, indicate whether they were positive or negative and show how this could affect the price. The user will have the ability of changing certain parameters such as the historical period for news to get analyzed and characteristics of the media source.
-
-Additional layers of complexity could be added tuning the NLP algorithms, the prediction ML models and the user interface.
-
-- How difficult is it to get there?
-
-We need to gather data from two different sources and understand two different API documentations. It is also difficult to find the best models for sentiment analysis and the ML tools to get a reasonable prediction. A decent output interface could also be problematic taking into consideration the different profiles of users.
+Tools from the GCP we’ll make our journey much easier! 
 
 ## 10. Pre-mortems
 
