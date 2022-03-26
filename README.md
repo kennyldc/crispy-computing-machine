@@ -16,7 +16,7 @@ Our team and our data product come to the aid to give new information to current
 
 We will build a prediction model with the current top six cryptocurrencies to measure if the price goes up or goes down in a specific time window.
 
-## 2. Users
+## 2. Users :couple:
 
 - Who will be the users of your application?
 
@@ -24,7 +24,7 @@ Current and potential investors. In short, people who are interested in making m
 
 - How are users going to interact with your application?
 
-Earlier iterations of our product will show predictions based on historical data, mainly doing assisted queries without any sophisticated UI. Advanced versions using our data product as inspiration could be deployed to users in dashboards using software such as Looker or Mode.
+Our data product will be displayed in a website. The user will be capable to select the currency of his/her interest and the number of days to make the prediction.
 
 ## 3. Data Product Architecture Diagram 
 
