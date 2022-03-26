@@ -63,13 +63,15 @@ Success in our product could be measured by the monetary gains of our clients af
 
 ## 7. Inference :arrows_counterclockwise:
 
-Our product consists in doing online prediction taking advantage of the low cost inside the GCP. For the most part of our MVP, devices with only CPU are enough while more sophisticated neural networks could use GPUs.
-
-## 8. Compute
-
-Same as with inference, for the most part of our MVP devices with only CPU are enough. More sophisticated iterations and models, particularly in the natural language processing side, could use devices with GPU.
+Our product consists in doing online prediction taking advantage of the low cost inside the GCP.
 
 We wil only do inference when the user make the request for a specific currency in a specific period of time.
+
+## 8. Compute :computer:
+
+For the most part of our data product, devices with only CPU are enough while more sophisticated neural networks could use GPUs.
+
+Only one device is enough and we are currently working in a VM with 2 vCPUs, 7.5 GB RAM, and TensorFlow 2.8 as the environment. We do not foresee having issues with billing. 
 
 ## 9. MVP
 
