@@ -45,13 +45,15 @@ In this first API Request Payload we get the top 6 market cap criptocurrencies f
 - luna
 - sol
 
-## 5. Modeling
+## 5. Modeling :thought_balloon:
 
-The problem that our Data Product solves could be modeled as one of supervised learning where the main output is the market price and one of the inputs consist of some sort of metric about the sentiment in news media. However, this response variable could be modified to measure a change in the numeric value of a certain index or discretize it to only quantify changes in a certain range. An alternative could be to estimate whether it varies or not. In that case, the simplest model to estimate is a logistic regression and could also be implemented alternatively with a Random Forest classification model.
+Our model aims to predict if the price of a determined cryptocurrency goes up or goes down using historical data of the market capitalization, current price and market volume. 
 
-One of the main features of our project is that our main input, the sentiment analysis in news, requires at the same time some kind of modeling effort where the titles and the corpus of the articles are processed to indicate whether it has positive or negative characteristics about the cryptocurrency in the data. In this case, natural language processing models come in handy.
+In a second iteration of the modeling, potential variables such as facebook likes, twitter followers, reddit average posts, reddit average comments, reddit subscribers, reddit accounts active, developer data (forks, stars, subscribers, pull requests merged, pull request contributors, etc.) and public interest stats like alexa rank, could be explored to analyze if they have a relation with the price movements. 
 
-In any case, we would use pretrained models with implementations either in Python or R.
+In any case, the simplest model to estimate is a logistic regression and could also be implemented alternatively with a Random Forest classification model and neural networks.
+
+We would use pretrained models with implementations in Python and BigQuery ML. 
 
 ## 6. Evaluation
 
