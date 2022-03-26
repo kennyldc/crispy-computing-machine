@@ -3,7 +3,7 @@
 
 <h2 align="left">crispy-computing-machine</h2>
 
-# Project Proposal: Sentiment analysis in news and its impact in market indicators
+# Project Proposal Title: Mastering crypto price movements with ML
 
 
 ## 1. Objectives
