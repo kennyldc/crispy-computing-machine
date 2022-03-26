@@ -6,15 +6,15 @@
 # Project Proposal Title: Mastering crypto price movements with ML
 
 
-## 1. Objectives
+## 1. ML and Business Objectives :muscle: :moneybag:
 
 - What is the problem that your Data Product will solve?
 
-We want to build a prediction model about cryptocurrency which can measure and predict market movements based on sentiment analysis extracted from journals and news.
+With more than 18,000 cryptocurrencies available in the market and 300 million users globally, information about these new trends are essential. Taking advantage of the movements in the future of the price of the coin you are investing will make you completely rich or completely poor in a second. 
 
-- If a company was to use this application, what would be their ML objectives and business objectives?
+Our team and our data product come to the aid to give new information to current and potential users in an unknown world and how to make better investing decisions and trade opportunities. 
 
-The ML objective is to make accurate predictions about the cryptocurrency prices taking into consideration the mechanisms of how news affects the market. The main business objective is to shed light to current and potential investors on how they could earn more money taking advantage of the insights in historic data.
+We will build a prediction model with the current top six cryptocurrencies to measure if the price goes up or goes down in a specific time window.
 
 ## 2. Users
 
