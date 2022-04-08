@@ -15,6 +15,19 @@
     ├── LICENSE
     └── README.md
 
+## Latest changes in our project :rotating_light:
+
+### Model Checkpoint
+
+Inside the models folder you will find the latest development with the training, execution and packaging of our machine learning model.
+
+In more detail, in this last checkpoint we extracted the data from a BigQuery, did some feature engineering and feature selection adjustments to leave the most important information about cryptocurrencies and be able to train the model.
+
+As part of the process of developing, we split our data into a training set and then applied a neural network to get the best currency price predictions. When put into operation with a validation test, the model obtained results as good as an accuracy of 0.894.
+
+With this model as the winner, the next we did was to package it in a Docker container and adapt it to a production environment. In addition to this, the model was trained directly from Vertex AI (where it was also saved) and developed on an endpoint to also make predictions from there.
+
+
 ## 1. ML and Business Objectives :muscle: :moneybag:
 
 - What is the problem that your Data Product will solve?
