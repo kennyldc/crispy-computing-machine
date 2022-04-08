@@ -20,4 +20,22 @@ For the feature engineering work we used common modules as numpy and pandas but 
 
 In the `feature_engineering.py` file there is a broad well documentation of the code but in a basic description, the class: 1) defines the number of *backward* days from the specific t0 selected, 2) defines the number of *forward* days from the specific t0 selected, 3) specifies the number of days in which the data will be grouped, 4) extracts performance and metrics information from the ‘time window’ selected and 5) retrieves price movement from data (particularly registers if it went up or down). As intended, the code is flexible enough to define different dates and cryptocurrencies. 
 
-An intermediate step is in the `transform.py` file which also works as an input for training the model. The code defines an object that helps to split the data in training and validation sets and has the option to scale certain features. 
+An intermediate step is in the `transform.py` file which also works as an input for training the model. The code defines an object that helps to split the data in training and validation sets and has the option to scale certain features.
+
+## Algorithm 
+
+To solve our data problem we rely on one of the most powerful and popular algorithms in recent years: deep neural networks. Neural networks are focused on emulating the learning approach that humans use to gain certain types of knowledge. Like brain neurons, the method also contains a number of artificial ‘neurons’, and uses them to identify and store information. This network consists of input, hidden and output layers.  
+
+The neurons take input data and simple operations are performed on those data. The results of these operations are passed to other neurons. Whether the result will be passed, is determined by the activation function. The activation function plays an important role for both feature extraction and classification.
+
+While in the biological neural network, the size of dendrites varies in accordance with the importance of inputs. In the network, this is achieved by using weights and biases.
+
+In the `train_v1.py` file, we develop all the training of our best model.
+
+To do this, we start with the specification of certain values such as: the initial day (January 1, 2021), the number of days back to start the window (60), the number of days forward to make the prediction (7) and the percentage of price increase in the window (0.1).
+
+For the network tuning, we specified a learning rate of 0.001, a batch size of 16, and ran 300 epochs for just the most popular currency in the base: BTC.
+
+The trained network had an initial layer, 5 hidden layers, and an output layer. Each of the layers was decreasing in the number of perceptrons in multiples of 16. We combine between leakyReLU and Relu activations for the intermediate ones and determine a sigmoid activation for the output. After the second and third layer we proposed a dropout of 0.2. As optimizer we use "Adam" and as loss function "Binary Cross Entropy".
+
+
