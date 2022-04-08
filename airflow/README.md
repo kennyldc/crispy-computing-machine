@@ -21,3 +21,7 @@ In order to access the Airflow Webserver the script creates a user with its corr
 ## User information evidence: 
 
 ![airflow3](https://user-images.githubusercontent.com/69408484/162349832-c71262fc-d4ef-4140-8391-dee8289c6c99.jpeg)
+
+## Editing connection information:
+
+![airflow4](https://user-images.githubusercontent.com/69408484/162349895-296f4fd5-90aa-4770-9498-3da22e58f992.jpeg)
