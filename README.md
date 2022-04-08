@@ -5,6 +5,31 @@
 
 # Mastering crypto price movements with ML
 
+# Members 
+
+| **Name** |**email**|**ID**|**Github handler**| 
+|:---:|:---:|:---:|:---:|
+| Carlos Eduardo López de la Cerda Bazaldua | carlos.lopezdelacerda@itam.mx | 158122 | @kennyldc | 
+| Miguel Ángel Reyes Retana | mreyesre@itam.mx | 045799 | @rrmiguel-2401 |
+| Uriel Martínez Sánchez | umartin5@itam.mx | 000202942 | @urielmtzsa| 
+| Peña Flores, Luis Fernando | luis.pena@itam.mx | 158488 | @TheKishimoto | 
+
+**Miguel Reyes Retana**
+- [Github profile ](https://github.com/rrmiguel-2401 "Miguel Reyes Retana")
+
+**Carlos López de la Cerda**
+- [Github profile ](https://github.com/kennyldc "Carlos López de la Cerda Bazaldua")
+
+**Uriel Martínez Sánchez**
+- [Github profile ](https://github.com/urielmtzsa "Uriel Martínez Sánchez")
+
+**Peña Flores, Luis Fernando**
+- [Github profile ](https://github.com/TheKishimoto "Peña Flores, Luis Fernando")
+
+## Why we are the best team? :busts_in_silhouette:
+
+We are the best team because we strongly believe that API stands for Amazing People Integrated... and we think that's beautiful.
+
 ## Repo structure 
     .
     ├── airflow                 # A description of the making of an Airflow setup inside a GCP Instance
@@ -33,9 +58,9 @@ Inside the `airflow` folder you will find a description of the process of creati
 
 The instance runs an automated script which installs Python 3, a virtual environment manager (venv) and Airflow. In order to access the Airflow Webserver the script creates a user with its corresponding password and has a firewall rule which opens port 8080 and whitelists certain IP addresses.
 
-## 1. ML and Business Objectives :muscle: :moneybag:
+# Project description
 
-- What is the problem that your Data Product will solve?
+## 1. ML and Business Objectives :muscle: :moneybag:
 
 With more than 18,000 cryptocurrencies available in the market and 300 million users globally, information about these new trends are essential. Taking advantage of the movements in the future of the price of the coin you are investing will make you completely rich or completely poor in a second. 
 
@@ -112,33 +137,8 @@ Another limitation is that this is a niche data product. Many common people coul
 
 ## 11. Next steps :feet:
 
-While the MVP requires only information from the cryptocurrencies to make the prediction, other phenomena suchs a news and media impact could also be related to the price movements.In more advanced iterations we could explore these trends with new data sources. 
-
-# Members 
-
-| **Name** |**email**|**ID**|**Github handler**| 
-|:---:|:---:|:---:|:---:|
-| Carlos Eduardo López de la Cerda Bazaldua | carlos.lopezdelacerda@itam.mx | 158122 | @kennyldc | 
-| Miguel Ángel Reyes Retana | mreyesre@itam.mx | 045799 | @rrmiguel-2401 |
-| Uriel Martínez Sánchez | umartin5@itam.mx | 000202942 | @urielmtzsa| 
-| Peña Flores, Luis Fernando | luis.pena@itam.mx | 158488 | @TheKishimoto | 
-
-**Miguel Reyes Retana**
-- [Github profile ](https://github.com/rrmiguel-2401 "Miguel Reyes Retana")
-
-**Carlos López de la Cerda**
-- [Github profile ](https://github.com/kennyldc "Carlos López de la Cerda Bazaldua")
-
-**Uriel Martínez Sánchez**
-- [Github profile ](https://github.com/urielmtzsa "Uriel Martínez Sánchez")
-
-**Peña Flores, Luis Fernando**
-- [Github profile ](https://github.com/TheKishimoto "Peña Flores, Luis Fernando")
-
-# Why we are the best team? :busts_in_silhouette:
-
-We are the best team because we strongly believe that API stands for Amazing People Integrated... and we think that's beautiful. 
+While the MVP requires only information from the cryptocurrencies to make the prediction, other phenomena suchs a news and media impact could also be related to the price movements.In more advanced iterations we could explore these trends with new data sources.  
 
 # Last modified:
 
-Friday, March 25. Zoom meeting between Uriel Martínez, Miguel Reyes and Carlos López de la Cerda with equal contributions.
+Friday, April 8 by Uriel Martínez, Miguel Reyes and Carlos López de la Cerda.
