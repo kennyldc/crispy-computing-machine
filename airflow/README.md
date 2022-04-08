@@ -25,3 +25,7 @@ In order to access the Airflow Webserver the script creates a user with its corr
 ## Editing connection information:
 
 ![airflow4](https://user-images.githubusercontent.com/69408484/162349895-296f4fd5-90aa-4770-9498-3da22e58f992.jpeg)
+
+# Note for professor 
+
+If you really want/need to access our Airflow setup inside our instance you can contact us (via Discord or mail) and provide us: a valid IP Address and the desired username. We’ll provide a password to log in. 
