@@ -34,7 +34,7 @@ We are the best team because we strongly believe that API stands for Amazing Peo
     .
     ├── airflow                 # A description of the making of an Airflow setup inside a GCP Instance
     ├── dags                    # A folder where we'll describe our Airflow DAGs (currently empty)
-    ├── model                   # A jupyter notebook which covers the model, from feature engineering to end-point prediction
+    ├── model                   # A set of files which covers all the model process from training to production
     ├── src                     # Source files, API description and ETL process documentation
     ├── utils                   # An API token list which supplies information of the source data
     └── README.md
