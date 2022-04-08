@@ -7,3 +7,9 @@ The instance runs an automated script (called airflow-setup.sh) provided in the 
 The script is stored in one of our buckets (hint: look for the one which has ‘airflow’ and ‘start’ as keywords).
 
 In order to access the Airflow Webserver the script creates a user with its corresponding password. The instance is modified with a firewall rule which opens port 8080 and whitelists certain IP addresses.
+
+# We provide the following images as evidences of our Airflow setup
+
+## Airflow log in:
+
+![airflow1](https://user-images.githubusercontent.com/69408484/162349582-97df0d98-fdf4-4a68-8e82-4702beee578f.jpeg)
