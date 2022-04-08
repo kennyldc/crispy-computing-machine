@@ -28,4 +28,4 @@ In order to access the Airflow Webserver the script creates a user with its corr
 
 # Note for professor 
 
-If you really want/need to access our Airflow setup inside our instance you can contact us (via Discord or mail) and provide us: a valid IP Address and the desired username. We’ll provide a password to log in. 
+If you really want/need to access our Airflow setup inside our instance you can contact us (via Discord or mail) and provide us: a valid IP Address and the desired username. We’ll give you a password to log in. 
