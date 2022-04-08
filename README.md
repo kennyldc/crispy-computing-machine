@@ -27,6 +27,12 @@ As part of the process of developing, we split our data into a training set and 
 
 With this model as the winner, the next thing we did was to package it in a Docker container and adapt it to a production environment. In addition to this, the model was trained directly from Vertex AI (where it was also saved) and developed on an endpoint to also make predictions from there.
 
+### Airflow Checkpoint :arrow_down_small:
+
+Inside the `airflow` folder you will find a description of the process of creating an instance called “airflow2” in our Google Cloud Project... yes it is '2', tests were made!
+
+The instance runs an automated script which installs Python 3, a virtual environment manager (venv) and Airflow. In order to access the Airflow Webserver the script creates a user with its corresponding password and has a firewall rule which opens port 8080 and whitelists certain IP addresses.
+
 ## 1. ML and Business Objectives :muscle: :moneybag:
 
 - What is the problem that your Data Product will solve?
