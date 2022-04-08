@@ -37,7 +37,6 @@ We are the best team because we strongly believe that API stands for Amazing Peo
     ├── model                   # A jupyter notebook which covers the model, from feature engineering to end-point prediction
     ├── src                     # Source files, API description and ETL process documentation
     ├── utils                   # An API token list which supplies information of the source data
-    ├── LICENSE
     └── README.md
 
 ## Latest changes in our project :rotating_light:
