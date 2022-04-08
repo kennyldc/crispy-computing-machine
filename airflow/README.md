@@ -13,3 +13,7 @@ In order to access the Airflow Webserver the script creates a user with its corr
 ## Airflow log in:
 
 ![airflow1](https://user-images.githubusercontent.com/69408484/162349582-97df0d98-fdf4-4a68-8e82-4702beee578f.jpeg)
+
+## Navigating inside DAGS section in Airflow
+
+![airflow2](https://user-images.githubusercontent.com/69408484/162349729-1d10c2f8-30b2-4810-a73c-39f250a63154.jpeg)
