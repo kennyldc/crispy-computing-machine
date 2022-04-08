@@ -3,8 +3,17 @@
 
 <h2 align="left">crispy-computing-machine</h2>
 
-# Project Proposal Title: Mastering crypto price movements with ML
+# Mastering crypto price movements with ML
 
+## Repo structure 
+    .
+    ├── airflow                 # A description of the making of an Airflow setup inside a GCP Instance
+    ├── dags                    # A folder where we'll describe our Airflow DAGs (currently empty)
+    ├── model                   # A jupyter notebook which covers the model, from feature engineering to end-point prediction
+    ├── src                     # Source files, API description and ETL process documentation
+    ├── utils                   # An API token list which supplies information of the source data
+    ├── LICENSE
+    └── README.md
 
 ## 1. ML and Business Objectives :muscle: :moneybag:
 
