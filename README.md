@@ -43,7 +43,7 @@ We are the best team because we strongly believe that API stands for Amazing Peo
 
 ### ML Model Trained Checkpoint :arrow_down_small:
 
-Inside the `model` folder you will find the latest development with the training, execution, packaging and deployment of our model.
+Inside the [model](https://github.com/kennyldc/crispy-computing-machine/tree/main/model) folder you will find the latest development with the training, execution, packaging and deployment of our model.
 
 In more detail, in this last checkpoint we extracted the data from a BigQuery, did some feature engineering and feature selection adjustments to leave the most important information about cryptocurrencies and be able to train the model.
 
@@ -53,7 +53,7 @@ With this model as the winner, the next thing we did was to package it in a Dock
 
 ### Airflow Checkpoint :arrow_down_small:
 
-Inside the `airflow` folder you will find a description of the process of creating an instance called “airflow2” in our Google Cloud Project... yes it is '2', tests were made!
+Inside the [airflow](https://github.com/kennyldc/crispy-computing-machine/tree/main/airflow) folder you will find a description of the process of creating an instance called “airflow2” in our Google Cloud Project... yes it is '2', tests were made!
 
 The instance runs an automated script which installs Python 3, a virtual environment manager (venv) and Airflow. In order to access the Airflow Webserver the script creates a user with its corresponding password and has a firewall rule which opens port 8080 and whitelists certain IP addresses.
 
