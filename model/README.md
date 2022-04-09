@@ -28,6 +28,8 @@ Before choosing a model, we decided to elaborate more on some of the characteris
 
 We consider this sub-process, as its name indicates, as a separate laboratory consisting of experiments where we were able to think better about building a machine learning tool to solve the problem. Our goal is to identify whether the price of the currency has gone up or down using the existing set of features. As part of the experiments we decided to work with a logistic regression, a random forest and a deep neural network.
 
+## ML Metrics
+
 ## Algorithm
 
 To solve our data problem we rely on one of the most powerful and popular algorithms in recent years: deep neural networks. Neural networks are focused on emulating the learning approach that humans use to gain certain types of knowledge. Like brain neurons, the method also contains a number of artificial ‘neurons’, and uses them to identify and store information. This network consists of input, hidden and output layers.  
@@ -43,5 +45,7 @@ To do this, we start with the specification of certain values such as: the initi
 For the network tuning, we specified a learning rate of 0.001, a batch size of 16, and ran 300 epochs for just the most popular currency in the base: BTC.
 
 The trained network had an initial layer, 5 hidden layers, and an output layer. Each of the layers was decreasing in the number of perceptrons in multiples of 16. We combine between leakyReLU and Relu activations for the intermediate ones and determine a sigmoid activation for the output. After the second and third layer we proposed a dropout of 0.2. As optimizer we use "Adam" and as loss function "Binary Cross Entropy".
+
+## Trade-offs
 
 
