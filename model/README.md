@@ -26,7 +26,7 @@ An intermediate step is in the `transform.py` file which also works as an input 
 
 ## Experiments 
 
-Before choosing a model, we decided to elaborate more on some of the characteristics of the database, exploring in depth the characteristics of the variables, from their range and distribution, to their usefulness for the problem.`experiments.py` serves as evidence of this process. 
+Before choosing a model, we decided to elaborate more on some of the characteristics of the database, exploring in depth the characteristics of the variables, from their range and distribution, to their usefulness for the problem.`experiments.ipynb` serves as evidence of this process. 
 
 We consider this sub-process, as its name indicates, as a separate laboratory consisting of experiments where we were able to think better about building a machine learning tool to solve the problem. Our goal is to identify whether the price of the currency has gone up or down using the existing set of features. As part of the experiments we decided to work with a logistic regression, a random forest and a deep neural network.
 
