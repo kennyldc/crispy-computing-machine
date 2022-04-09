@@ -48,4 +48,14 @@ The trained network had an initial layer, 5 hidden layers, and an output layer. 
 
 ## Trade-offs
 
+## Packaging 
+
+Once we experimented and tested the ML model, we decided to go one step further. In this case, a particular focus of our team was to place special emphasis on the deployment of the work.
+
+As a way to ensure the reproducibility of our work, we package the model in a Docker container. Within the same `crypto_model_v1.ipynb` file, there is the code section where we write a Dockerfile and save it.
+
+Using the GCP tools we were able to create the container within the same cloud environment and deposit it in the Container Registry as a repository. We provide the following evidence from our GCP project.
+
+<img width="932" alt="Captura de Pantalla 2022-04-08 a la(s) 20 05 21" src="https://user-images.githubusercontent.com/69408484/162550638-fa5db7d0-8c69-4af3-a669-0594c78308c8.png">
+
 
