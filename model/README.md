@@ -64,3 +64,10 @@ In the `job_train.py` file, we create a function (called create_custom_job_sampl
 
 This function returns a response from where it executes the job in Vertex AI.
 
+## Model and endpoint deployment
+
+As the penultimate part of our scheme, we focus on the model and endpoint deployment
+
+In the `endpoint.py` file, we create a function (called model_endpoint) which creates a model through Vertex AI and deploys it into an endpoint from Vertex AI. Our function requires: a) the name of the model in Vertex AI, b) the bucket path of the model to deploy, c) the container image, and d) a machine type where the process will be executed. 
+
+This function returns a response from where it executes the model and an endpoint in Vertex AI.
