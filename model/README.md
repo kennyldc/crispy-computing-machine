@@ -32,6 +32,8 @@ We consider this sub-process, as its name indicates, as a separate laboratory co
 
 ## ML Metrics
 
+With the logistic regression we obtained a score of .75. This is the probability for the user to obtain a predicted probability score of a given event using a logistic regression model. Random Forest gave us an accuracy of .98. This is not surprising. Random forests has been observed to overfit certain datasets with noisy classification tasks. The Deep Neural Network performed well and we feel we can still improve on the optimal configuration. 
+
 ## Algorithm
 
 To solve our data problem we rely on one of the most powerful and popular algorithms in recent years: deep neural networks. Neural networks are focused on emulating the learning approach that humans use to gain certain types of knowledge. Like brain neurons, the method also contains a number of artificial ‘neurons’, and uses them to identify and store information. This network consists of input, hidden and output layers.  
