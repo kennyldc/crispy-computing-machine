@@ -12,6 +12,8 @@ The data we use for our model comes from the CoinGecko cryptocurrency API, which
 
 In order to start developing the model, we extracted the data from BigQuery, created a time column which helps us to represent our inputs in date format and we established a first type of hyperparameter (t0) to be modified and used as the initial day in model training. Every time we want to change the temporary cut-off point from which we will train the model, we will modify t0. Then we make sure with a summary that the data was imported correctly, visualizing if there were missing values and exploring the class types of each variable.
 
+For the following processs we will work only with the the most popular currency in the database: BTC.
+
 ## Feature Engineering
 
 The feature engineering part is contained in the `feature_engineering.py` file, which was also built from our backbone file. As you can see in the diagram, this sub-process serves as the entry gate for training the model in the form of a class. 
