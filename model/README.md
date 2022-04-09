@@ -58,4 +58,9 @@ Using the GCP tools we were able to create the container within the same cloud e
 
 <img width="932" alt="Captura de Pantalla 2022-04-08 a la(s) 20 05 21" src="https://user-images.githubusercontent.com/69408484/162550638-fa5db7d0-8c69-4af3-a669-0594c78308c8.png">
 
+## Training job using AI Training
+
+In the `job_train.py` file, we create a function (called create_custom_job_sample) which simplifies the job of training the model using the AI Training tools inside the GCP. Our function requires: a) the name of our GCP project, b) the name of custom training job, c) the image url of the docker container, d) a location for the region of the instance facilitated by Google and e) an api_endpoint option for Job Service Client. 
+
+This function returns a response from where it executes the job in Vertex AI.
 
