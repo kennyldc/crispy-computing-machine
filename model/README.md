@@ -32,7 +32,7 @@ We consider this sub-process, as its name indicates, as a separate laboratory co
 
 ## ML Metrics
 
-With the logistic regression we obtained a score of .75. This is the probability for the user to obtain a predicted probability score of a given event using a logistic regression model. Random Forest gave us an accuracy of .98. This is not surprising. Random forests has been observed to overfit certain datasets with noisy classification tasks. The Deep Neural Network performed well and we feel we can still improve on the optimal configuration. 
+With the logistic regression we obtained a score of .75. This is the probability for the user to obtain a predicted probability score of a given event using a logistic regression model. Random forest gave us an accuracy of .98. This is not surprising. Random forest has been observed to overfit certain datasets with noisy classification tasks. The deep neural network performed well and we feel we can still improve on the optimal configuration. 
 
 ## Algorithm
 
@@ -52,7 +52,7 @@ The trained network had an initial layer, 5 hidden layers, and an output layer. 
 
 ## Trade-offs
 
-The Deep Neural Network performs well on nonlinear functions. Neural networks allow us to extract useful information and produce inferences from the available data thanks to their learning capacity. Although it can be computationally expensive, it is better to use it to avoid the overfitting that the RF method can have in a classification task.
+The deep neural network performs well on nonlinear functions. Neural networks allow us to extract useful information and produce inferences from the available data thanks to their learning capacity. Although it can be computationally expensive, it is better to use it to avoid the overfitting that the random forest method can have in a classification task.
 
 ## Packaging 
 
