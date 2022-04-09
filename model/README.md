@@ -52,6 +52,8 @@ The trained network had an initial layer, 5 hidden layers, and an output layer. 
 
 ## Trade-offs
 
+The Deep Neural Network performs well on nonlinear functions. Neural networks allow us to extract useful information and produce inferences from the available data thanks to their learning capacity. Although it can be computationally expensive, it is better to use it to avoid the overfitting that the RF method can have in a classification task.
+
 ## Packaging 
 
 Once we experimented and tested the ML model, we decided to go one step further. In this case, a particular focus of our team was to place special emphasis on the deployment of the work.
