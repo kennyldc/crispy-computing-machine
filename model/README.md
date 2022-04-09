@@ -71,3 +71,21 @@ As the penultimate part of our scheme, we focus on the model and endpoint deploy
 In the `endpoint.py` file, we create a function (called model_endpoint) which creates a model through Vertex AI and deploys it into an endpoint from Vertex AI. Our function requires: a) the name of the model in Vertex AI, b) the bucket path of the model to deploy, c) the container image, and d) a machine type where the process will be executed. 
 
 This function returns a response from where it executes the model and an endpoint in Vertex AI.
+
+## Prediction from an End-Point :gem:
+
+Finally we arrive at the last point of our ML journey!
+
+Using all of the knowledge and tools from above we create our last code inside the `prediction.py` file.
+
+Do you want to know the probability that the current price of the currency will rise by ‘P’ percent over the next ‘X’ days? We got you. 
+
+Our last code predicts if the price from a selected day will go up a certain incremental rate “P” over the next “X” days. Our last function (called prediction) requires: a) the number of days back from the selected day, b) the number of days ahead “X” to make the prediction, c) the number of days grouped to get metrics in the observation window, d) the minimum percentage “P” increase to make the prediction, e) a list of selected features for the model, f) the bucket name where the model is stored, g) the endpoint name, and h) the day for the prediction (t0).
+
+If the selected day (t0) is not in our database the code will print “The selected day is not yet available” otherwise it will start the magic! :crystal_ball:
+
+The following is an example of the function executed from t0 = February 28th, 2022, with 60 days in the past, an expected increment of the current price by 10% (X = 0.1) for the next seven days (D = 7).
+
+![Captura de Pantalla 2022-04-08 a la(s) 20 43 10](https://user-images.githubusercontent.com/69408484/162551842-661e6c16-a210-4c50-a988-dd42e50bd211.png)
+
+We predict a 15.92% of probability that the price will go up. We expect our users to take this recomendation and make money!
