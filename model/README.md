@@ -22,7 +22,13 @@ In the `feature_engineering.py` file there is a broad well documentation of the 
 
 An intermediate step is in the `transform.py` file which also works as an input for training the model. The code defines an object that helps to split the data in training and validation sets and has the option to scale certain features.
 
-## Algorithm 
+## Experiments 
+
+Before choosing a model, we decided to elaborate more on some of the characteristics of the database, exploring in depth the characteristics of the variables, from their range and distribution, to their usefulness for the problem.`experiments.py` serves as evidence of this process. 
+
+We consider this sub-process, as its name indicates, as a separate laboratory consisting of experiments where we were able to think better about building a machine learning tool to solve the problem. Our goal is to identify whether the price of the currency has gone up or down using the existing set of features. As part of the experiments we decided to work with a logistic regression, a random forest and a deep neural network.
+
+## Algorithm
 
 To solve our data problem we rely on one of the most powerful and popular algorithms in recent years: deep neural networks. Neural networks are focused on emulating the learning approach that humans use to gain certain types of knowledge. Like brain neurons, the method also contains a number of artificial ‘neurons’, and uses them to identify and store information. This network consists of input, hidden and output layers.  
 
