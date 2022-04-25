@@ -1,11 +1,11 @@
-
 import json
 import requests
 import time
 from datetime import timedelta,datetime
 from google.cloud import bigquery,storage
+from google.oauth2 import service_account
 
-def etl(date_request,bucket,crypto):
+def etl(date_request,bucket,crypto, auth):
     
     """
     Gets data from CoinGecko API. Request is made from last day loaded in bucket + 1 to date_request
@@ -18,6 +18,8 @@ def etl(date_request,bucket,crypto):
         Bucket name
     crypto: list
         List of cryptos to make request
+    auth: str
+    	Path to google cloud credentials
         
     Returns
     -------
@@ -25,6 +27,8 @@ def etl(date_request,bucket,crypto):
         If request was successful
     """
     
+    date_request=str(date_request)
+    date_request=datetime.strptime(date_request, '%Y-%m-%d').date()
     base_url = 'https://api.coingecko.com/api/v3/'
     
     request=base_url+"coins/list"
@@ -33,7 +37,8 @@ def etl(date_request,bucket,crypto):
     for i in crypto:
         crypto_id.append(next(item for item in cat if item["symbol"] == i)["id"])    
     
-    client = bigquery.Client()
+    credentials = service_account.Credentials.from_service_account_file(auth, scopes=["https://www.googleapis.com/auth/cloud-platform"])
+    client = bigquery.Client(credentials=credentials, project=credentials.project_id)
     query_job = client.query(
     """
     SELECT DISTINCT
@@ -43,6 +48,7 @@ def etl(date_request,bucket,crypto):
     """)
     df = query_job.result().to_dataframe()
     date_start=max(df["date"].values)+timedelta(days=1)
+    #date_start=date_request
 
     days=(date_request-date_start).days
     dates = [(date_start+timedelta(days=x)).strftime("%d-%m-%Y") for x in range(days+1)]
@@ -76,14 +82,16 @@ def etl(date_request,bucket,crypto):
             except:
                 pass
             
-        client = storage.Client()
+        client = storage.Client.from_service_account_json(auth)
         gcs_bucket = client.get_bucket(bucket)
         for row in data:
             path = f"crypto/{row['symbol']}/data_{row['date']}.json"
             blob = gcs_bucket.blob(path)
-            with blob.open(mode = 'w') as file:
-                json.dump(row, file)
-                
+            blob.upload_from_string(data=json.dumps(row),content_type='application/json')
+            #with blob.open(mode = 'w') as file:
+            #    json.dump(row, file)
+            #blob.upload_from_string(json.dump(row))
+    
         text='Successful request'
     
     else:
@@ -91,4 +99,3 @@ def etl(date_request,bucket,crypto):
         text='The day entered is already loaded'
     
     return text
-    
