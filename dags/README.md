@@ -2,6 +2,8 @@
 
 In this folder we provide the scripts of our DAG (dag.py) and the Python file which has the function to read the data from the crypto API and (after *several* and painful attempts) is dumped into a GCS bucket.
 
+The DAG runs in the 'Airflow3' instance inside our project.
+
 Our DAG has two tasks:
 
 Task1 is a BashOperator which copies the dag file (from our dag folder inside GCS) to our VM. We find this task particularly helpful for debugging purposes. As you can imagine, instead of restarting the instance we just trigger a new DAG.
