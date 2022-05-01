@@ -64,7 +64,7 @@ After taking the values from the global variables and parameters the task comple
 
 The last task (Task3) creates features and predictions csv files using the information from the trained model in the preceding steps inside a Python function.
 
-The “predictions” function is defined in the `predict_fp.py` file. There is also complementary information in the [Model folder](https://github.com/kennyldc/crispy-computing-machine/tree/main/model) from our Repo that is more or less required to fully understand the insides of the ML alternative proposed for the problem. However, for the purpose of defining what is inside of this task the most important arguments are: 
+The “predictions” function is defined in the `predict_fp.py` file. There is also complementary information in the [Model folder](https://github.com/kennyldc/crispy-computing-machine/tree/main/model) from our Repo that is more or less required to fully understand the insides of the ML alternative proposed for the problem. However, for the purpose of defining what is inside of this function the most important arguments are: 
 
 1) “X”: defined as the set of independent variables (mostly information about the price of the currency).
 
@@ -72,7 +72,7 @@ The “predictions” function is defined in the `predict_fp.py` file. There is 
 
 3) “best”: an object that contains the best features available after running variable clustering in the feature selection process from the model specification.
 
-4) “scaler”: an object that contains the scale information (the process of standardizing the values to take values from 0 to 1) for the independent variables using minmaxscaler from scikit.learn.
+4) “scaler”: an object that contains the scaler information (the process of standardizing the values to take values from 0 to 1) for the independent variables using minmaxscaler from scikit.learn.
 
 5) “endpoint_name”: the name of the endpoint generated through Vertex AI.
 
