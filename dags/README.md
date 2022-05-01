@@ -1,18 +1,24 @@
-# DAG chekpoint description
+# Project DAGs 
 
-In this folder we provide the scripts of our Airflow DAG (dag.py) and the Python file which has the function to read the data from the crypto API and (after *several* and painful attempts) is dumped into a GCS bucket.
+In this folder we show our Airflow DAGs scripts along with the Python files where the functions to execute each of the tasks are located.
 
-The DAG runs in the 'Airflow3' instance inside our project.
+## ETL DAG
 
-Our DAG has two tasks:
+Our first DAG is called **etl_dag** and is located in the `dag.py` file. This DAG has two tasks:
 
-Task1 is a BashOperator which copies the dag file (from our dag folder inside GCS) to our VM. We find this task particularly helpful for debugging purposes. As you can imagine, instead of restarting the instance we just trigger a new DAG.
+Task1 is a PythonOperator which calls a function that reads the crypto data files from the API and dumps them into a GCS bucket. 
 
-Task2 is a PythonOperator which calls a function that reads the crypto data files from the API and dumps them into a GCS bucket. The function has two important arguments: 1) "date_request" which is called using the Jinja Templating operator {{ yesterday_ds }} and 2) "crypto", in which we called from the dag a list specifying the top 6 cryptocurrencies: ['btc', 'eth', 'bnb', 'xrp', 'luna', 'sol', 'ada', 'avax', 'dot', 'doge'].
+The function is defined in the `etl_job.py` file and has two main arguments:
 
-The data generated is stored into a GCS bucket under the crypto folder. 
+1) "date_request":  which is called using the Jinja Templating operator {{ yesterday_ds }}
 
-Task2 is dependent on Task1.
+2) "crypto":  in which we called from the dag a list specifying the top 6 cryptocurrencies: ['btc', 'eth', 'bnb', 'xrp', 'luna', 'sol', 'ada', 'avax', 'dot', 'doge'].
+
+The rest of the arguments are designed to pass the name of the bucket and the GC credentials.
+
+**The data generated is stored into a GCS bucket under the crypto folder.**
+
+Task2 is a BigQuery view from the data stored in the first task. Therefore, Task2 is dependent on Task1.
 
 We provide the following evidence of the successes and failures of our DAG:
 
