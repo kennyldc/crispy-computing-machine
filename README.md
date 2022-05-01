@@ -133,11 +133,3 @@ The number of currencies in our product multiplies the number of models and the 
 Failures in the application comes more from the usability side of the users in the sense that we could provide inaccurate predictions. In terms of the engineering process, the complexity in the number of variables could interfere in the workflow. 
 
 Another limitation is that this is a niche data product. Many common people could be completely unaffected by the crypto market and have no interest in it.
-
-## 11. Next steps :feet:
-
-While the MVP requires only information from the cryptocurrencies to make the prediction, other phenomena suchs a news and media impact could also be related to the price movements.In more advanced iterations we could explore these trends with new data sources.  
-
-# Last modified:
-
-Friday, April 8 by Uriel Martínez, Miguel Reyes and Carlos López de la Cerda.
