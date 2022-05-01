@@ -50,7 +50,7 @@ Complementary arguments define: the name of our GCP project, the GC credentials,
 
 This function returns a response from where it executes the job in Vertex AI.
 
-The next task (Task2) is related to the endpoint deployment and also called from a Python function defined in the `endpoint.py` file. Related to the preceding task, in this process the function creates a model and deploys it into an endpoint using Vertex AI.
+The next task (Task2) refers to the endpoint deployment and is also called from a Python function defined in the `endpoint.py` file. Related to the preceding task, in this process the function creates a model and deploys it into an endpoint using Vertex AI.
 
 The function shares with the previous task the arguments of the date, the GC credentials, and a machine specification for the execution inside Vertex AI but also requires:
 
