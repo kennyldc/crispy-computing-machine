@@ -6,7 +6,7 @@ from feature_engineering import window_time
 from transform import scaler_split
 from google.cloud import bigquery,storage,aiplatform
 
-def prediction(vobs,vdes,step,incremental,best,bucket,scaler,endpoint,day):
+def predictions(vobs,vdes,step,incremental,best,bucket,scaler,endpoint_n,day):
     
     """
     Predicts if price from a selected day will go up certain incremental rate over 
@@ -22,13 +22,13 @@ def prediction(vobs,vdes,step,incremental,best,bucket,scaler,endpoint,day):
         Number of days grouped to get metrics in the observation window
     incremental : float
         Porcentage of increment minimum of the price in the performance window
-    best : list
-        List of features for the model
+    best : str
+        Path from bucket of the list object best features
     bucket : str
         Bucket name
     scaler : str
         Path from bucket of the object scaler for the features
-    endpoint : str
+    endpoint_n : str
         Endpoint name
     day : datetime
         Day for the prediction
@@ -79,18 +79,23 @@ def prediction(vobs,vdes,step,incremental,best,bucket,scaler,endpoint,day):
         window.anclai=df["t"].max()-window.vdes
         window.anclaf=df["t"].max()-window.vdes
         X=window.eng_X(df,['symbol','ancla'])
-        X=X[best]
-        cp=df[df["t"]==df["t"].max()-window.vdes]["current_price"].values[0]
-
+        
         client = storage.Client()
         gcs_bucket = client.get_bucket(bucket)
+        blob = gcs_bucket.blob(best)
+        with blob.open(mode = 'rb') as file:
+            best=pickle.load(file)
+        X=X[best]
+        
+        cp=df[df["t"]==df["t"].max()-window.vdes]["current_price"].values[0]
+
         blob = gcs_bucket.blob(scaler)
         with blob.open(mode = 'rb') as file:
             sc = pickle.load(file)
         X=sc.transform(X)
 
         endpoint = aiplatform.Endpoint(
-        endpoint_name=endpoint)
+        endpoint_name=aiplatform.Endpoint.list(filter=f'display_name="{endpoint_n}"')[0].resource_name)
         response = endpoint.predict([list(X[0])])
         
         print(f"Probability of current price ({round(cp,2)}) will go up {round(incremental*100,2)}% over the next {vdes} days is: {round(response.predictions[0][0]*100,2)}%")

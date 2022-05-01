@@ -1,11 +1,13 @@
 from google.cloud import aiplatform
 
-def model_endpoint(name,model,image,machine='n1-standard-4'):
+def model_endpoint(date,name,model,image,machine='n1-standard-4'):
     """
     Creates a model through Vertex AI and deploys it into an endpoint from Vertex AI
     
     Parameters
-    ----------        
+    ----------   
+    date : str
+        Format : '%Y-%m-%d'
     name : str
         Name of the model in Vertex AI
     model : str
@@ -21,7 +23,7 @@ def model_endpoint(name,model,image,machine='n1-standard-4'):
         Executes a model and an endpoint through Vertex AI 
     """
     model = aiplatform.Model.upload(
-        display_name=name,
+        display_name=name + "_" + date,
         artifact_uri=model,
         serving_container_image_uri=image)
 

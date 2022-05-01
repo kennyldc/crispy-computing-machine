@@ -1,6 +1,8 @@
 from google.cloud import aiplatform
+import time
 
-def create_custom_job_sample(
+def create_custom_job(
+    date: str,
     project: str,
     display_name: str,
     container_image_uri: str,
@@ -11,7 +13,9 @@ def create_custom_job_sample(
     Creates custom training job
     
     Parameters
-    ----------        
+    ----------  
+    date : str
+        Format : '%Y-%m-%d'
     project : str
         Project name
     display_name : str
@@ -34,7 +38,7 @@ def create_custom_job_sample(
     # This client only needs to be created once, and can be reused for multiple requests.
     client = aiplatform.gapic.JobServiceClient(client_options=client_options)
     custom_job = {
-        "display_name": display_name,
+        "display_name": display_name + "_" + date,
         "job_spec": {
             "worker_pool_specs": [
                 {
@@ -55,4 +59,5 @@ def create_custom_job_sample(
     }
     parent = f"projects/{project}/locations/{location}"
     response = client.create_custom_job(parent=parent, custom_job=custom_job)
+    time.sleep(600) 
     print("response:", response)

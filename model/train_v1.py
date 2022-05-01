@@ -9,6 +9,7 @@ import pandas as pd
 from functools import reduce
 from varclushi import VarClusHi
 from google.cloud import aiplatform, bigquery, storage
+from google.oauth2 import service_account
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from tensorflow.keras.models import Sequential,load_model
@@ -16,7 +17,7 @@ from tensorflow.keras.layers import InputLayer, Dense, BatchNormalization, Dropo
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.regularizers import l1_l2
 from tensorflow.keras.losses import BinaryCrossentropy 
-from tensorflow.keras.callbacks import ModelCheckpoint
+from tensorflow.keras.callbacks import ModelCheckpoint,EarlyStopping
 from feature_engineering import window_time
 from transform import scaler_split
 
@@ -47,7 +48,9 @@ version = 'v1'
 
 # Get data from Big Query
 
-client = bigquery.Client()
+#client = bigquery.Client()
+credentials = service_account.Credentials.from_service_account_file("/.auth/crispy-key-2022.json", scopes=["https://www.googleapis.com/auth/cloud-platform"])
+client = bigquery.Client(credentials=credentials, project=credentials.project_id)
 query_job = client.query(
 """
 SELECT
@@ -110,6 +113,10 @@ rs = rs.sort_values(by=['Cluster','RS_Ratio']).reset_index(drop=True)
 rs['id'] = rs.groupby('Cluster').cumcount()+1
 best = rs.loc[rs['id']==1]['Variable'].tolist()
 
+blob = gcs_bucket.blob(f'models/{coin}/{version}/best_{version}.pkl')
+with blob.open(mode = 'wb') as file:
+    pickle.dump(best,file)
+
 # Scaler and Split
 
 tad = X[um+best].merge(Y,on=um,how='left')
@@ -125,18 +132,20 @@ with blob.open(mode = 'wb') as file:
 
 checkpoints = ModelCheckpoint("model.h5",monitor='val_loss',verbose=10,save_best_only=True,
                               save_weights_only=False,mode="min",save_freq='epoch')
+early_stop = EarlyStopping(monitor='val_loss', patience=10)
+
 DNN = Sequential()
 DNN.add(InputLayer(input_shape=sp.X_train.shape[1]))
 DNN.add(Dense(2048, activation='relu'))
 DNN.add(Dropout(rate=0.2))
 DNN.add(Dense(1024, activation='relu',kernel_regularizer = l1_l2(0.001, 0.001)))
 DNN.add(Dropout(rate=0.2))
-DNN.add(Dense(256, activation='LeakyReLU'))
+DNN.add(Dense(256, activation='relu'))
 DNN.add(BatchNormalization())
 DNN.add(Dense(64, activation='relu'))
-DNN.add(Dense(16, activation='LeakyReLU',kernel_regularizer = l1_l2(0.01, 0.01)))
+DNN.add(Dense(16, activation='relu',kernel_regularizer = l1_l2(0.01, 0.01)))
 DNN.add(Dense(units=sp.Y_train.shape[1], activation='sigmoid'))
 DNN.compile(optimizer=Adam(lr), loss= BinaryCrossentropy(),metrics=['accuracy','AUC'])
-DNN.fit(x=sp.X_train, y=sp.Y_train, batch_size=bs, epochs=e, validation_data=(sp.X_val, sp.Y_val),callbacks=[checkpoints])
+DNN.fit(x=sp.X_train, y=sp.Y_train, batch_size=bs, epochs=e, validation_data=(sp.X_val, sp.Y_val),callbacks=[checkpoints,early_stop])
 model = load_model("model.h5")
 model.save('gs://' + BUCKET + f'/models/{coin}/{version}/model_{version}')
