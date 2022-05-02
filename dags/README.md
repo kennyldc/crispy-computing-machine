@@ -30,7 +30,7 @@ Task2 is dependent on Task1.
 
 The second DAG designed for our project is called **training_dag** and is located in the `training_dag.py` file.
 
-This DAG has four tasks: 
+This DAG has five tasks: 
 
 The first task is called Task0 (Python indexing… :stuck_out_tongue:) and it is defined as an ExternalTaskSensor which tracks the execution of the **etl_dag** (see above). Although this one is optional, we recommend including it in the process.
 
@@ -82,9 +82,13 @@ Complementary arguments require the path to save the csv files and the GC creden
 
 In the execution of this task, from the endpoint deployment of the model, the function calls a “predict” which ends up giving a probability (from 0 to 1) that the price of the currency goes up at a determined period of time.
 
-All the information gets stored inside a GCS Bucket. 
+All the information gets stored inside a GCS Bucket.
 
-From the MLOps Dag, all tasks are dependent on the previous.  
+The last task (Task4) executes a SQL script (with a view) using BigQueryOperator in which we verify the accuracy of our predictions compared with the real movements of the crypto price. The script is found in the SQL/predicciones path of this folder.
+
+In the table we can see number of the times that effectively the price goes up compared with the probability that our model has. The probability is incremental (by 0.1). Therefore, in the cases whith more probabibily from our model we expect seeing more times the price going up from our data.
+
+From the MLOps Dag, all tasks are dependent on the previous.
 
 # Dag and Instance schedule
 
