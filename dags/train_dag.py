@@ -2,6 +2,7 @@
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from airflow.contrib.operators.bigquery_operator import BigQueryOperator
 from airflow.sensors.external_task_sensor import ExternalTaskSensor
 from airflow.models import Variable
 from datetime import datetime
@@ -9,6 +10,8 @@ from airflow.utils.dates import days_ago
 from crispy.jobs_train import create_custom_job
 from crispy.endpoint import model_endpoint
 from crispy.predict_fp import predictions
+import os
+
 
 args = {
     'owner': 'Uriel Martinez',
@@ -17,18 +20,25 @@ args = {
     'depends_on_past': True,
 }
 
+path = os.path.dirname(os.path.abspath(__file__))
+sql_path = os.path.join(path, 'sql')
+etl_path = os.path.join(sql_path, 'predicciones')
+ddl_path = os.path.join(etl_path, 'tabla_predicciones.sql')
+ddl2 = open(ddl_path, mode='r').read()
+
 params = {
     'container': 'gcr.io/crispy-computing-machine/model@sha256:42c5b70a88ef4ae57bab8d5d6ba9e0afe7a1b5ae5a5e0c8f1b3b4688ab6cb9dd',	
     'image' : 'gcr.io/cloud-aiplatform/prediction/tf2-cpu.2-3:latest',
-    'machine': 'n1-standard-4'
+    'machine': 'n1-standard-4',
+    'project_id': Variable.get("project-id")
 }
 
 dag = DAG(
     dag_id='training_dag',
     default_args=args,
-    #schedule_interval='* * * * *',
+    schedule_interval='* * * * *',
     #start_date=datetime(2022, 4, 30),
-    schedule_interval='0 6 * * *',
+#    schedule_interval='0 6 * * *',
     start_date=days_ago(0),
     catchup=True,
     tags=['python', 'crispy', 'train'],
@@ -69,6 +79,15 @@ task3=PythonOperator(
     op_kwargs={'bucket': Variable.get('bucket'), 'X': 'models/btc/v1/X_v1.pkl','Y': 'models/btc/v1/Y_v1.pkl','best': 'models/btc/v1/best_v1.pkl','scaler': 'models/btc/v1/scaler_v1.pkl','endpoint_name': "model_v1_{{ ds }}_endpoint",'features': 'models/btc/v1/features_v1.csv','predictions': 'models/btc/v1/predictions_v1.csv','auth': Variable.get("auth") }
 )
 
-#task3
+# Task 4: Using predictions tables
+task4=BigQueryOperator(
+    dag=dag,
+    params=params,
+    task_id = 'view_task',
+    use_legacy_sql=False,
+    sql=ddl2
+)
+
+#task4
 #task1 >> task2 >> task3
-task0 >> task1 >> task2 >> task3
+task0 >> task1 >> task2 >> task3 >> task4
