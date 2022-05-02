@@ -1,6 +1,6 @@
 # Project DAGs 
 
-In this folder we show our Airflow DAGs scripts along with the Python files where the functions to execute each of the tasks are located.
+In this folder we show our Airflow DAGs scripts along with the Python files where the functions to execute each of the tasks are located and the SQL scripts to execute some views inside BigQuery.
 
 ## ETL DAG
 
@@ -18,11 +18,13 @@ The rest of the arguments are designed to pass the name of the bucket and the GC
 
 **The data generated is stored into a GCS bucket under the crypto folder.**
 
-Task2 is a BigQuery view from the data stored in the first task. Therefore, Task2 is dependent on Task1.
+Task2 is a BigQuery view from the data stored in the first task. We show our SQL script (called `ddl.sql`) inside our SQL folder.
 
-We provide the following evidence of the successes and failures of our DAG:
+In the DAG we use BigQueryOperator, select some important features and drop them into a new table.
 
-<img width="306" alt="Captura de Pantalla 2022-04-24 a la(s) 20 16 02" src="https://user-images.githubusercontent.com/69408484/165005665-c3b923f1-7492-4c27-8258-8801d21518c2.png">
+**The selection of the variables defined in the SQL script could be found under the SQL Workspace inside BigQuery.**
+
+Task2 is dependent on Task1.
 
 ## MLOPs DAG
 
@@ -78,7 +80,7 @@ The “predictions” function is defined in the `predict_fp.py` file. There is 
 
 Complementary arguments require the path to save the csv files and the GC credentials stored as variables. 
 
-In the execution of this task, from the endpoint deployment of the model the function calls a “predict” which ends up giving a probability (from 0 to 1) that the price of the currency goes up at a determined period of time.
+In the execution of this task, from the endpoint deployment of the model, the function calls a “predict” which ends up giving a probability (from 0 to 1) that the price of the currency goes up at a determined period of time.
 
 All the information gets stored inside a GCS Bucket. 
 
