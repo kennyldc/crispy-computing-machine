@@ -86,7 +86,7 @@ All the information gets stored inside a GCS Bucket.
 
 The last task (Task4) executes a SQL script (with a view) using BigQueryOperator in which we verify the accuracy of our predictions compared with the real movements of the crypto price. The script is found in the SQL/predicciones path of this folder.
 
-The result from the Wiew is stored inside BigQuery as:
+The result from the View is stored inside BigQuery as:
 
 <img width="988" alt="Captura de Pantalla 2022-05-02 a la(s) 0 07 01" src="https://user-images.githubusercontent.com/69408484/166186863-975eecfb-3e5f-4f0e-ab0b-9500ea82ca21.png">
 
