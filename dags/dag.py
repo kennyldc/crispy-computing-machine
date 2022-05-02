@@ -9,7 +9,6 @@ from datetime import datetime
 from airflow.utils.dates import days_ago
 from crispy.etl_job import etl
 import os
-from airflow.providers.google.cloud.transfers.local_to_gcs import LocalFilesystemToGCSOperator
 
 args = {
     'owner': 'Miguel Reyes',
