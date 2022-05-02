@@ -1,6 +1,7 @@
 """Crispy DAG for ETL"""
 
 from airflow import DAG
+from airflow.contrib.operators.bigquery_operator import BigQueryOperator
 from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
 from airflow.models import Variable
@@ -8,11 +9,12 @@ from datetime import datetime
 from airflow.utils.dates import days_ago
 from crispy.etl_job import etl
 import os
+from airflow.providers.google.cloud.transfers.local_to_gcs import LocalFilesystemToGCSOperator
 
 args = {
-    'owner': 'Carlos Lopez',
-    'email': 'caribaz@gmail.com',
-    'retries': 3,
+    'owner': 'Miguel Reyes',
+    'email': 'reyesretanamiguel@gmail.com',
+    'retries': 2,
     'depends_on_past': True,
 }
 
@@ -37,19 +39,19 @@ dag = DAG(
     max_active_runs=1
 )
 
-task1 = BashOperator(
+task1=PythonOperator(
     dag=dag,
-    params=params,
-    task_id='update_dag_files',
-    bash_command='sudo gsutil -m cp -r gs://{{ params.bucket }}/{{ params.folder }} /home/airflow'
-)
-
-task2=PythonOperator(
-    dag=dag,
-    task_id='run_etl_job',
+    task_id='task2',
     python_callable=etl,
     op_kwargs={'date_request': '{{ yesterday_ds }}', 'bucket': Variable.get('bucket'), 'crypto': ['btc', 'eth', 'bnb', 'xrp', 'luna', 'sol', 'ada', 'avax', 'dot', 'doge'], 'auth':Variable.get("auth")}
 )
 
+task2 = BigQueryOperator(
+    dag=dag,
+    params=params,
+    task_id = 'view_task',
+    use_legacy_sql=False,
+    sql=ddl
+)
 
 task1 >> task2
