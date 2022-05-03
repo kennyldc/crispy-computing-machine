@@ -11,8 +11,7 @@
 |:---:|:---:|:---:|:---:|
 | Carlos Eduardo López de la Cerda Bazaldua | carlos.lopezdelacerda@itam.mx | 158122 | @kennyldc | 
 | Miguel Ángel Reyes Retana | mreyesre@itam.mx | 045799 | @rrmiguel-2401 |
-| Uriel Martínez Sánchez | umartin5@itam.mx | 000202942 | @urielmtzsa| 
-| Peña Flores, Luis Fernando | luis.pena@itam.mx | 158488 | @TheKishimoto | 
+| Uriel Martínez Sánchez | umartin5@itam.mx | 000202942 | @urielmtzsa|
 
 **Miguel Reyes Retana**
 - [Github profile ](https://github.com/rrmiguel-2401 "Miguel Reyes Retana")
@@ -23,9 +22,6 @@
 **Uriel Martínez Sánchez**
 - [Github profile ](https://github.com/urielmtzsa "Uriel Martínez Sánchez")
 
-**Peña Flores, Luis Fernando**
-- [Github profile ](https://github.com/TheKishimoto "Peña Flores, Luis Fernando")
-
 ## Why we are the best team? :busts_in_silhouette:
 
 We are the best team because we strongly believe that API stands for Amazing People Integrated... and we think that's beautiful.
@@ -33,7 +29,7 @@ We are the best team because we strongly believe that API stands for Amazing Peo
 ## Repo structure 
     .
     ├── airflow                 # A description of the making of an Airflow setup inside a GCP Instance
-    ├── dags                    # A folder where we'll describe our Airflow DAGs (currently empty)
+    ├── dags                    # A folder where we describe our Airflow DAGs
     ├── model                   # A set of files which covers all the model process from training to production
     ├── src                     # Source files, API description and ETL process documentation
     ├── utils                   # An API token list which supplies information of the source data
