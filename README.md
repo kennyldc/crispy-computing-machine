@@ -1,7 +1,4 @@
-<div align="left"><img src="/images/ITAM.png"width="100" height="50">    <FONT SIZE=7>MCD</font></div>
-
-
-<h2 align="left">crispy-computing-machine</h2>
+![Crispy Com](https://user-images.githubusercontent.com/69408484/168495208-69d62b90-8959-4581-9826-6ee32a3ec581.png)
 
 # Mastering crypto price movements with ML
 
