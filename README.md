@@ -1,23 +1,15 @@
 ![Crispy Com](https://user-images.githubusercontent.com/69408484/168495208-69d62b90-8959-4581-9826-6ee32a3ec581.png)
 
-# Mastering crypto price movements with ML
+# Mastering cryptocurrency price movements with Machine Learning
 
 # Members 
 
-| **Name** |**email**|**ID**|**Github handler**| 
+| **Name** | **Email** | **ID** | **Github** | 
 |:---:|:---:|:---:|:---:|
-| Carlos Eduardo López de la Cerda Bazaldua | carlos.lopezdelacerda@itam.mx | 158122 | @kennyldc | 
-| Miguel Ángel Reyes Retana | mreyesre@itam.mx | 045799 | @rrmiguel-2401 |
-| Uriel Martínez Sánchez | umartin5@itam.mx | 000202942 | @urielmtzsa|
+| Carlos Eduardo López de la Cerda Bazaldua | carlos.lopezdelacerda@itam.mx | 158122 | [@kennyldc](https://github.com/kennyldc) | 
+| Miguel Ángel Reyes Retana | mreyesre@itam.mx | 45799 | [@rrmiguel-2401](https://github.com/rrmiguel-2401) |
+| Uriel Martínez Sánchez | umartin5@itam.mx | 202942 | [@urielmtzsa](https://github.com/urielmtzsa) |
 
-**Miguel Reyes Retana**
-- [Github profile ](https://github.com/rrmiguel-2401 "Miguel Reyes Retana")
-
-**Carlos López de la Cerda**
-- [Github profile ](https://github.com/kennyldc "Carlos López de la Cerda Bazaldua")
-
-**Uriel Martínez Sánchez**
-- [Github profile ](https://github.com/urielmtzsa "Uriel Martínez Sánchez")
 
 ## Why we are the best team? :busts_in_silhouette:
 
@@ -25,30 +17,12 @@ We are the best team because we strongly believe that API stands for Amazing Peo
 
 ## Repo structure 
     .
-    ├── airflow                 # A description of the making of an Airflow setup inside a GCP Instance
-    ├── dags                    # A folder where we describe our Airflow DAGs
-    ├── model                   # A set of files which covers all the model process from training to production
+    ├── airflow                 # A description of how we created an Airflow setup inside a GCP instance
+    ├── dags                    # The files and the description of our Airflow DAGs
+    ├── model                   # A set of files and its decription which covers all the model process from training to production
     ├── src                     # Source files, API description and ETL process documentation
     ├── utils                   # An API token list which supplies information of the source data
     └── README.md
-
-## Latest changes in our project :rotating_light:
-
-### ML Model Trained Checkpoint :arrow_down_small:
-
-Inside the [model](https://github.com/kennyldc/crispy-computing-machine/tree/main/model) folder you will find the latest development with the training, execution, packaging and deployment of our model.
-
-In more detail, in this last checkpoint we extracted the data from a BigQuery, did some feature engineering and feature selection adjustments to leave the most important information about cryptocurrencies and be able to train the model.
-
-As part of the process of developing, we split our data into a training set and then applied a neural network to get the best currency price prediction for the most popular crypo: BTC. When put into operation with a validation test, the model obtained results as good as an accuracy of 0.894.
-
-With this model as the winner, the next thing we did was to package it in a Docker container and adapt it to a production environment. In addition to this, the model was trained directly from Vertex AI (where it was also saved) and developed on an endpoint to also make predictions from there.
-
-### Airflow Checkpoint :arrow_down_small:
-
-Inside the [airflow](https://github.com/kennyldc/crispy-computing-machine/tree/main/airflow) folder you will find a description of the process of creating an instance called “airflow2” in our Google Cloud Project... yes it is '2', tests were made!
-
-The instance runs an automated script which installs Python 3, a virtual environment manager (venv) and Airflow. In order to access the Airflow Webserver the script creates a user with its corresponding password and has a firewall rule which opens port 8080 and whitelists certain IP addresses.
 
 # Project description
 
