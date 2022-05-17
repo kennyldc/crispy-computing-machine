@@ -34,13 +34,21 @@ In this project, we analyze the predictability of this market with enough flexib
 
 With this in mind, if machine learning is good at predicting the price of bitcoin, why not improve it and build a flexible data architecture that could add more coins and more users? In this project we aim to solve this question by predicting with a deep neural network if the price of BTC goes up or goes down by a given probability and a specific number of days ahead set by the user.
 
-## 2. Users :couple:
+Our objectives are:
+
+1. Provide reliable predictions of price changes using ML tools.
+
+2. Construct a flexible and powerful data architecture.
+
+3. Allow users from different backgrounds to interact and get valuable information.
+
+# Users :couple:
 
 This application is designed for people who want to invest in cryptos and need accurate information to seize their money :moneybag:. We strongly believe that better information leads to better decisions and that this should be attainable for everyone, not only an elite or a small group of people. 
 
 By this time our product is in the phase of model deployment and orchestration. However, in the future we would like to see it displayed in an aplication (either mobile or through a website). The user will be capable to select the currency of his/her interest and the number of days to make the prediction.
 
-## 3. Data Product Architecture Diagram 
+Data Product Architecture Diagram 
 
 The key components of our data product architecture are displayed in Figure 1 to illustrate the interplay between system components. In a nutshell, Google Cloud Platform services guided the process and Python served as the main programming language.
 
@@ -56,7 +64,7 @@ We strongly recommend to take a look:
 
 - At the [Airflow](https://github.com/kennyldc/crispy-computing-machine/tree/main/Airflow) and [dags](https://github.com/kennyldc/crispy-computing-machine/tree/main/dags) folder for information about the Airflow orchestration.
 
-## 4.Data :chart_with_upwards_trend:
+Data :chart_with_upwards_trend:
 
 The Data we use for our model comes from the [CoinGecko](https://www.coingecko.com/) cryptocurrency API that contains live prices, trading volume, exchange volume, trading pairs, historical data, contract address data, crypto categories, crypto derivatives, and images. We choose this API because it is free, reliable, and comprehensive.
 
@@ -66,7 +74,7 @@ We extract historical data from the API making a request that lists all coins wi
 
 Because one of our DAGs executes a extraction function, the data is always up to date.
 
-## 5. Modeling :thought_balloon:
+# Modeling :thought_balloon:
 
 Our main objective by using ML is to predict if the price of a determined cryptocurrency goes up or goes down using historical data of the market capitalization, current price and market volume. 
 
@@ -74,7 +82,7 @@ Currently, we have a completed an end to end product for BTC using a deep neural
 
 Deep neural networks are focused on emulating the learning approach that humans use to gain a certain type of knowledge. These neural networks learn hierarchical structures and levels of representation and abstraction to understand data patterns that come from various types of sources such as images, videos, sound, or text. The main idea behind an artificial neuron is quite simple. Has one or more inputs and one output. Depending on the value of those inputs, the neuron can be activated.  Like brain neurons, the method also contains a number of artificial ‘neurons’ and uses them to identify and store information. This network consists of input, hidden, and output layers. 
 
-## 6. Evaluation :white_check_mark:
+# Evaluation :white_check_mark:
 
 To evaluate the performance of our data product, we use purely technical metrics of machine learning, as well as tests that we carried out as a team in terms of usefulness. We also reflect whether the product satisfied the objectives set out in the definition of the problem and its limitations.
 
@@ -82,7 +90,7 @@ Our current deep network model for BTC achieves an accuracy of 0.8387. Let's rem
 
 As a team we also test our data product in terms of its usefulness. We put ourselves in the users' shoes and observed if the predictions made at a certain moment would work for us. Since the first prediction made with the BTC model was made more than a month ago and it was built for the probability of the next seven days, then we could go back to check if the prediction was good. The probability that the price would then rise by 10% for the next 7 days was as low as 15% and fortunately for our purposes (unfortunately for crypto users) the price did not go up. We became confident that the product accomplishes the goal of giving information to the users.
 
-## 7. Inference :arrows_counterclockwise:
+# Inference :arrows_counterclockwise:
 
 For the current version of our data product with BTC, we made predictions only once a day with a schelude DAG. Those predictions are stored into GCS and can be viewed using BigQuery.
 
@@ -90,17 +98,17 @@ We strongly recommend take a look at the [dags](https://github.com/kennyldc/cris
 
 Maybe with future iterations and more resources we could modifiy the inference process.
 
-## 8. Compute :computer:
+# Compute :computer:
 
 In the current version of our data product with BTC, only CPUs are required. The intesive part of training the models is made through VerteX AI services.
 
-## 9. MVP :trophy:
+# MVP :trophy:
 
 For our MVP we want to complete a minimal useful workflow: extract historical data from the API and storage it in a Bucket, perform a basic EDA to visualize trends, execute queries inside BigQuery to get a glimpse of the data, make a basic feature engineering of the variables, test candidate ML models to make the prediction with logistic regressions inside BigQuery ML and neural networks inside Vertex AI if the price goes up or goes down, tune the hyperparameters and deploy the model to construct a web interface where our user could select a currency and a time window to see our prediction.
 
 Tools from the GCP we’ll make our journey much easier! 
 
-## 10. Pre-mortems :skull:
+# Pre-mortems :skull:
 
 The number of currencies in our product multiplies the number of models and the potential pitfalls in our predictions.
 
