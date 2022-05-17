@@ -62,7 +62,9 @@ The Data we use for our model comes from the [CoinGecko](https://www.coingecko.c
 
 From the API documentation, we obtained examples for our API Request Payloads. Because the API is free, our script does not need a key but it has a rate limit of 50 calls/minute. In practice we made a rate limit of 35 calls/minute using Python’s time.sleep() function so the API could not block us.
 
-We extract historical data from the API making a request that lists all coins with id, name, and symbol. We performed a transformation intermediate process (that is why we identify our process as an ETL job) because we found numerous useless features from the API extraction such as the prices of the currencies in terms of another. After that, we write the data into Google Cloud Storage. Because one of our DAGs executes a extraction function, the data is always up to date.
+We extract historical data from the API making a request that lists all coins with id, name, and symbol. We performed a transformation intermediate process (that is why we identify our process as an ETL job) because we found numerous useless features from the API extraction such as the prices of the currencies in terms of another. After that, we write the data into Google Cloud Storage. 
+
+Because one of our DAGs executes a extraction function, the data is always up to date.
 
 ## 5. Modeling :thought_balloon:
 
