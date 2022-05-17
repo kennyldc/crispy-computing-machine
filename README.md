@@ -70,7 +70,7 @@ Because one of our DAGs executes a extraction function, the data is always up to
 
 Our main objective by using ML is to predict if the price of a determined cryptocurrency goes up or goes down using historical data of the market capitalization, current price and market volume. 
 
-Currently, we have a completed end to end product for BTC using a deep neural network. We strongly recommend take a look at the [model](https://github.com/kennyldc/crispy-computing-machine/tree/main/model) folder for more information.
+Currently, we have a completed an end to end product for BTC using a deep neural network. We strongly recommend take a look at the [model](https://github.com/kennyldc/crispy-computing-machine/tree/main/model) folder for more information.
 
 Deep neural networks are focused on emulating the learning approach that humans use to gain a certain type of knowledge. These neural networks learn hierarchical structures and levels of representation and abstraction to understand data patterns that come from various types of sources such as images, videos, sound, or text. The main idea behind an artificial neuron is quite simple. Has one or more inputs and one output. Depending on the value of those inputs, the neuron can be activated.  Like brain neurons, the method also contains a number of artificial ‘neurons’ and uses them to identify and store information. This network consists of input, hidden, and output layers. 
 
@@ -84,15 +84,15 @@ As a team we also test our data product in terms of its usefulness. We put ourse
 
 ## 7. Inference :arrows_counterclockwise:
 
-Our product consists in doing online prediction taking advantage of the low cost inside the GCP.
+For the current version of our data product with BTC, we made predictions only once a day with a schelude DAG. Those predictions are stored into GCS and can be viewed using BigQuery.
 
-We wil only do inference when the user make the request for a specific currency in a specific period of time.
+We strongly recommend take a look at the [dags](https://github.com/kennyldc/crispy-computing-machine/tree/main/model) folder for more information.
+
+Maybe with future iterations and more resources we could modifiy the inference process.
 
 ## 8. Compute :computer:
 
-For the most part of our data product, devices with only CPU are enough while more sophisticated neural networks could use GPUs.
-
-Only one device is enough and we are currently working in a VM with 2 vCPUs, 7.5 GB RAM, and TensorFlow 2.8 as the environment. We do not foresee having issues with billing. 
+In the current version of our data product with BTC, only CPUs are required. The intesive part of training the models is made through VerteX AI services.
 
 ## 9. MVP :trophy:
 
