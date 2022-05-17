@@ -62,7 +62,7 @@ We strongly recommend to take a look:
 
 - At the [model](https://github.com/kennyldc/crispy-computing-machine/tree/main/model) folder for information about the model development and deployment.
 
-- At the [Airflow](https://github.com/kennyldc/crispy-computing-machine/tree/main/Airflow) and [dags](https://github.com/kennyldc/crispy-computing-machine/tree/main/dags) folder for information about the Airflow orchestration.
+- At the [airflow](https://github.com/kennyldc/crispy-computing-machine/tree/main/airflow) and [dags](https://github.com/kennyldc/crispy-computing-machine/tree/main/dags) folder for information about the Airflow orchestration.
 
 # Data :chart_with_upwards_trend:
 
