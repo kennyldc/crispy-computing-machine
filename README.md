@@ -42,7 +42,19 @@ By this time our product is in the phase of model deployment and orchestration. 
 
 ## 3. Data Product Architecture Diagram 
 
-![diagram](https://user-images.githubusercontent.com/69408484/160226312-59a323a3-87e7-41a7-a803-0cf29ac04830.png)
+The key components of our data product architecture are displayed in Figure 1 to illustrate the interplay between system components. In a nutshell, Google Cloud Platform services guided the process and Python served as the main programming language.
+
+![training_model_diagram drawio (1)](https://user-images.githubusercontent.com/69408484/168915229-34237da9-ca08-464b-a4af-1296abf07f29.png)
+
+Finally, with all these decisions, we then construct our orchestration in Airflow in order to automate all the (re)training process. Our DAG’s make the same process described above with a daily execution at 06:00.
+
+We strongly recommend to take a look: 
+
+- At the [src](https://github.com/kennyldc/crispy-computing-machine/tree/main/src) folder for information about the data ingesting and feature engineering.
+
+- At the [model](https://github.com/kennyldc/crispy-computing-machine/tree/main/model) folder for information about the model development and deployment.
+
+- At the [Airflow](https://github.com/kennyldc/crispy-computing-machine/tree/main/Airflow) and [dags](https://github.com/kennyldc/crispy-computing-machine/tree/main/dags) folder for information about the Airflow orchestration.
 
 ## 4.Data :chart_with_upwards_trend:
 
