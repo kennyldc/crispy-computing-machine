@@ -58,18 +58,11 @@ We strongly recommend to take a look:
 
 ## 4.Data :chart_with_upwards_trend:
 
-[Coingecko](https://www.coingecko.com/) is a crypto API with data such as live prices, trading volume, exchange volumes, trading pairs, historical data, contract address data, crypto categories, crypto derivatives, images and more.
+The Data we use for our model comes from the [CoinGecko](https://www.coingecko.com/) cryptocurrency API that contains live prices, trading volume, exchange volume, trading pairs, historical data, contract address data, crypto categories, crypto derivatives, and images. We choose this API because it is free, reliable, and comprehensive.
 
-From API's documentation we obtained examples for our API Request Payloads. Even though the API does not require a key, it has a rate limit of 50 calls/minute, however, in practice we made a rate limit of 35 calls/minute so the API didn't block us.
+From the API documentation, we obtained examples for our API Request Payloads. Because the API is free, our script does not need a key but it has a rate limit of 50 calls/minute. In practice we made a rate limit of 35 calls/minute using Python’s time.sleep() function so the API could not block us.
 
-In this first API Request Payload we get the top 6 market cap criptocurrencies from 01-01-2017 to 28-02-2022:
-
-- btc
-- eth
-- bnb
-- xrp
-- luna
-- sol
+We extract historical data from the API making a request that lists all coins with id, name, and symbol. We performed a transformation intermediate process (that is why we identify our process as an ETL job) because we found numerous useless features from the API extraction such as the prices of the currencies in terms of another. After that, we write the data into Google Cloud Storage. Because one of our DAGs executes a extraction function, the data is always up to date.
 
 ## 5. Modeling :thought_balloon:
 
