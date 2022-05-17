@@ -36,9 +36,9 @@ With this in mind, if machine learning is good at predicting the price of bitcoi
 
 ## 2. Users :couple:
 
-Users of our product are current and potential investors. In short, people who are interested in making money :moneybag:
+This application is designed for people who want to invest in cryptos and need accurate information to seize their money :moneybag:. We strongly believe that better information leads to better decisions and that this should be attainable for everyone, not only an elite or a small group of people. 
 
-Our data product will be displayed in a website. The user will be capable to select the currency of his/her interest and the number of days to make the prediction.
+By this time our product is in the phase of model deployment and orchestration. However, in the future we would like to see it displayed in an aplication (either mobile or through a website). The user will be capable to select the currency of his/her interest and the number of days to make the prediction.
 
 ## 3. Data Product Architecture Diagram 
 
