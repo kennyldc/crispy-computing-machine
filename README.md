@@ -64,7 +64,7 @@ We strongly recommend to take a look:
 
 - At the [Airflow](https://github.com/kennyldc/crispy-computing-machine/tree/main/Airflow) and [dags](https://github.com/kennyldc/crispy-computing-machine/tree/main/dags) folder for information about the Airflow orchestration.
 
-Data :chart_with_upwards_trend:
+# Data :chart_with_upwards_trend:
 
 The Data we use for our model comes from the [CoinGecko](https://www.coingecko.com/) cryptocurrency API that contains live prices, trading volume, exchange volume, trading pairs, historical data, contract address data, crypto categories, crypto derivatives, and images. We choose this API because it is free, reliable, and comprehensive.
 
