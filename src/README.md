@@ -38,7 +38,3 @@ Finally, we created a dataset in **Google BigQuery** named *crispy_dwh*, we crea
 ## First Exploratoy Data Analysis
 
 When we made the API Request Payloads we noticed that payload gave us information about current price, market cap, volume, and features that we didn't expect such as facebook likes, twitter followers, reddit average posts, reddit average comments, reddit subscribers, reddit accounts active, developer data (forks, stars, subscribers, pull requests merged, pull request contributors, etc.) and public interest stats like alexa rank.
-
-## Next steps...
-
-We will explore which cryptocurrencies we are going to use for modelling, what period time is enough for that and what features will be useful for predincting our problem (MVP). Also, for next steps we consider add news information in order to prove if adding news information helps to make best predictions.
