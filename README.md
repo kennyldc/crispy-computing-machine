@@ -76,9 +76,11 @@ Deep neural networks are focused on emulating the learning approach that humans 
 
 ## 6. Evaluation :white_check_mark:
 
-To evaluate model performance we will rely on generic performance metrics such as accuracy, because we'll work on a classification ML problem (if the currency price goes up or goes down).
+To evaluate the performance of our data product, we use purely technical metrics of machine learning, as well as tests that we carried out as a team in terms of usefulness. We also reflect whether the product satisfied the objectives set out in the definition of the problem and its limitations.
 
-Success in our product could be measured by the monetary gains of our clients after a determined time. 
+Our current deep network model for BTC achieves an accuracy of 0.8387. Let's remember that accuracy measures the percentage of cases in which the model has succeeded. Therefore we are in a good position with our specification. With our Binary Cross Entropy specification we achieved a loss of 0.6023. Finally, we obtained an AUC result of 0.7827. Overall, this standard machine learning evaluation metrics give evidence that the model is good enough.
+
+As a team we also test our data product in terms of its usefulness. We put ourselves in the users' shoes and observed if the predictions made at a certain moment would work for us. Since the first prediction made with the BTC model was made more than a month ago and it was built for the probability of the next seven days, then we could go back to check if the prediction was good. The probability that the price would then rise by 10% for the next 7 days was as low as 15% and fortunately for our purposes (unfortunately for crypto users) the price did not go up. We became confident that the product accomplishes the goal of giving information to the users.
 
 ## 7. Inference :arrows_counterclockwise:
 
