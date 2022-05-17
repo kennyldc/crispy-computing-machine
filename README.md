@@ -68,13 +68,11 @@ Because one of our DAGs executes a extraction function, the data is always up to
 
 ## 5. Modeling :thought_balloon:
 
-Our model aims to predict if the price of a determined cryptocurrency goes up or goes down using historical data of the market capitalization, current price and market volume. 
+Our main objective by using ML is to predict if the price of a determined cryptocurrency goes up or goes down using historical data of the market capitalization, current price and market volume. 
 
-In a second iteration of the modeling, potential variables such as facebook likes, twitter followers, reddit average posts, reddit average comments, reddit subscribers, reddit accounts active, developer data (forks, stars, subscribers, pull requests merged, pull request contributors, etc.) and public interest stats like alexa rank, could be explored to analyze if they have a relation with the price movements. 
+Currently, we have a completed end to end product for BTC using a deep neural network. We strongly recommend take a look at the [model](https://github.com/kennyldc/crispy-computing-machine/tree/main/model) folder for more information.
 
-In any case, the simplest model to estimate is a logistic regression and could also be implemented alternatively with a Random Forest classification model and neural networks.
-
-We would use pretrained models with implementations in Python and BigQuery ML. 
+Deep neural networks are focused on emulating the learning approach that humans use to gain a certain type of knowledge. These neural networks learn hierarchical structures and levels of representation and abstraction to understand data patterns that come from various types of sources such as images, videos, sound, or text. The main idea behind an artificial neuron is quite simple. Has one or more inputs and one output. Depending on the value of those inputs, the neuron can be activated.  Like brain neurons, the method also contains a number of artificial ‘neurons’ and uses them to identify and store information. This network consists of input, hidden, and output layers. 
 
 ## 6. Evaluation :white_check_mark:
 
