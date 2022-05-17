@@ -104,14 +104,14 @@ In the current version of our data product with BTC, only CPUs are required. The
 
 # MVP :trophy:
 
-For our MVP we want to complete a minimal useful workflow: extract historical data from the API and storage it in a Bucket, perform a basic EDA to visualize trends, execute queries inside BigQuery to get a glimpse of the data, make a basic feature engineering of the variables, test candidate ML models to make the prediction with logistic regressions inside BigQuery ML and neural networks inside Vertex AI if the price goes up or goes down, tune the hyperparameters and deploy the model to construct a web interface where our user could select a currency and a time window to see our prediction.
+Our product currently has an end to end data architecture inside GCP for making predictions if the price of Bitcoin goes up or goes down by `P` percent in the following `X` days from a selected `t0` day. The project is orchestrated in Airflow extracting the data from the API daily and training the model from an endpoint inside Vertex AI. The predictions are then stored inside GCS and can be viewed through BigQuery.
 
-Tools from the GCP we’ll make our journey much easier! 
+We consider this to be a valuable MVP for the most popular cryptocurrency in the world: BTC.
+
+Tools from the GCP made our journey much easier! However, we are looking in the future for more delevopment in order to make an user friendly application.
 
 # Pre-mortems :skull:
 
-The number of currencies in our product multiplies the number of models and the potential pitfalls in our predictions.
+We came short to apply our product to more currencies and develop an app. That would imply more monetary and time resources. In that sense, the current product is not particularly accessive for everyone.
 
-Failures in the application comes more from the usability side of the users in the sense that we could provide inaccurate predictions. In terms of the engineering process, the complexity in the number of variables could interfere in the workflow. 
-
-Another limitation is that this is a niche data product. Many common people could be completely unaffected by the crypto market and have no interest in it.
+Another unintended harm of our product could occur when the prediction of our model does not result as expected and a user loses money along the way. This could be easily tackled by pitching the product in a way that users understand that our results are not taken from a magical crystal ball but from statistical techniques that try to give the best prediction but could be completely affected by chance.
